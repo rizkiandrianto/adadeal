@@ -1,0 +1,102 @@
+@font-face {
+font-family:Myriad;
+src: url(MyriadPro-Regular.otf);
+}
+
+body{
+	font-family:"Myriad";
+	}
+	
+#containArea{
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	}
+	
+#containArea .header{
+	width: 100%;
+	height: 40px;
+	border-radius: 7px 7px 0px 0px;
+	background-color: #F6921E;
+	color: #FFF;
+	padding: 13px 0px 0px 15px;
+	font-family: "Myriad Pro","DejaVu Sans Condensed",Helvetica,Arial,sans-serif;
+	font-size: 17px;
+	}
+	
+.faqBlockA01{
+	width: 100%;
+	font-size: 16px;
+	text-indent:50px;
+	text-align: justify;
+	}
+
+.helpTitleBlockA01 h3{
+	width:920px;
+	background-color:#f6921e;
+	color:#fff;
+	text-align:left;
+	font-size:24px;
+	padding:10px;
+	border-top:1px solid #f6921e;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	}
+
+.helpTitleBlockA01{
+	width:940px;
+	height:auto;
+	margin-bottom:50px;
+	}
+	
+.helpTitleBlockA01 .helpColumnBlockA01{
+	width:170px;
+	float:left;
+	margin:10px 9px;
+	}
+
+.helpTitleBlockA01 .helpColumnBlockA01 img{
+	margin-left: 60px;
+	height: 50px;
+	width: auto;
+	}
+
+.imageTitle{
+	text-align:center;
+	font-weight:bold;
+	}
+	
+.imageDescript{
+	text-align:center;
+	font-size:12px;
+	}
+	
+.helpBlockB01{
+	margin-top:50px;
+	}
+
+.helpBlockB01 img {
+	float:left;
+	padding:0 50px;
+	}
+	
+.helpBlockB01 p {
+	width:660px;
+	float:left;
+	padding-right:50px;
+	}
+
+.helpBlockB01 li{
+	list-style: inside decimal;
+	padding-left:50px;
+	}
+
+.helpBlockB01 .helpTextBlockA01 {
+	margin-bottom:10px;
+	width:900px;
+	font-size:18px;
+	padding-right:0px;
+	}
+#breadcrumb{
+	margin-bottom:10px;
+	}

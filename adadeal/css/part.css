@@ -1,0 +1,114 @@
+@font-face {
+font-family:Myriad;
+src: url(MyriadPro-Regular.otf);
+}
+
+body{
+	font-family:Myriad;
+	}
+
+#breadcrumb {
+	margin-bottom: 25px;
+}
+
+dl {
+	width: 825px;
+	margin: 10px auto;
+}
+
+dd{
+	margin-left: 15px;
+	text-align:justify;
+}
+
+a {
+	color:#f6921e;	
+}
+
+.helpTitleBlockA01 h3{
+	width:100%;
+	background-color:#f6921e;
+	color:#fff;
+	text-align:left;
+	font-size:24px;
+	padding:10px;
+	border-top:1px solid #f6921e;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	}
+	
+.helpTitleBlockA01 .helpColumnBlockA01{
+	width:180px;
+	float:left;
+	margin:10px 5px;
+	}
+
+.imageTitle{
+	text-align:center;
+	font-weight:bold;
+	}
+	
+.imageDescript{
+	text-align:center;
+	font-size:12px;
+	}
+
+#containArea{
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	}
+	
+#containArea .header{
+	width: 100%;
+	height: 40px;
+	border-radius: 7px 7px 0px 0px;
+	background-color: #F6921E;
+	color: #FFF;
+	padding: 13px 0px 0px 15px;
+	font-family: Myriad;
+	font-size: 17px;
+	}
+
+h4 {
+	width: 825px;
+	margin: 20px auto 10px;
+	font-size: 16pt;
+}
+
+#wrap #wrapInner #mainArea #contentArea p{
+	width: 825px;
+	font-size: 12pt;
+	font-family: Myriad;
+	text-align: justify;
+	margin: 20px auto;
+	}
+	
+.tittleBlockC01{
+	width: 100%;
+	height: 45px;
+	margin: 10px 0px;
+	border-radius: 5px 5px 0px 0px;
+	background: #f6921e;
+	}
+	
+.tittleBlockC01 h2{
+	 padding: 5px 35px;
+	 color:#fff;
+	 font-size:28px;
+	 }
+	 
+.columnBlockD01{
+	float: left;
+	width: 11%;
+	margin: 20px 64px 20px 50px;
+}
+
+.contact {
+	width:200px;	
+}
+
+.chart {
+	margin:0;
+	padding:0;	
+}

@@ -1,0 +1,125 @@
+@font-face {
+font-family:Myriad;
+src: url(MyriadPro-Regular.otf);
+}
+
+body{
+	font-family:"Myriad";
+	}
+
+.detailColumnBlockD01{
+	width:238px;
+	height:auto;
+	float:left;
+	margin-top:50px;
+	padding:35px 20px;
+	border:1px solid #25aae1;
+	border-radius:5px;
+	text-align:center;
+	}
+
+.detailColumnBlockD01 .originalPrice{
+	text-decoration:line-through;
+	font-size:19px;
+	}
+
+.detailColumnBlockD01 .newPrice{
+	font-size:27px;
+	font-weight:bold;
+	color:#f6921e;
+	margin-bottom:40px;
+	}
+
+.detailColumnBlockD01 .discount,
+.detailColumnBlockD01 .sold{
+	width:190px;
+	height:auto;
+	margin-bottom:15px;
+	}
+
+.detailColumnBlockD01 .discount{
+	font-weight:bold;
+	}
+	
+.detailColumnBlockD01 .pleft,
+.detailColumnBlockD01 .pright {
+	float:left;
+	width:95px;
+	font-size:19px;
+	text-align:right;
+	}
+
+.detailColumnBlockD01 ul li button{
+	background:#26a9e0;
+	border: medium none;
+	border-radius: 3px;
+	width: 180px;
+	height: 45px;
+	margin: 10px 15px;
+	color: #FFF;
+	font-weight: bold;
+	cursor:pointer;
+	}
+
+.detailColumnBlockD01 .shareBlockD01{
+	margin-top: -90px;
+}
+
+.discount-tag {
+	position: relative;
+	top: 150px;
+	left: -20px;
+}
+
+.detailColumnBlockD02{
+	margin:50px 5px 0 24px;
+	border-right:1px solid #E3E3E3;
+	width:300px;
+	height:auto;
+	float:left;
+	}
+
+.detailColumnBlockD02 h3,
+.detailColumnBlockD03 h3,
+.detailColumnBlockD04 h3{
+	margin:10px 0 15px 0;
+	color:#26a9e0;
+	}
+
+.detailColumnBlockD02 ul li,
+.detailColumnBlockD03 ul li{
+	list-style:circle;
+/*	list-style:☺;
+*/	}
+
+.detailColumnBlockD03{
+	margin:50px 0 0 14px;
+	width:300px;
+	height:auto;
+	float:left;
+	}
+
+.detailColumnBlockD04{
+	margin-top:30px;
+	width:100%;
+	height:auto;
+	float:right;	
+	text-align: justify;
+	}
+
+.sideDetailColumnBlockD04{
+	width: 30%;
+	float:left;
+	margin: 17px 16px 0px 0px;
+	}
+	
+.sideDetailColumnBlockD04 h4{
+	text-align:center;
+	margin: 3px 0px;
+	}
+
+.contentDetailColumnBlockD01{
+	width:68%;
+	float:right;
+	border-top:1px solid #E3E3E3;
+	}

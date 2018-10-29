@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="keywords" content="kupon, coupon, deal, adadeal, jual, murah">
+    <!--For Ie Compatible-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+	<!--For Ie Compatible-->    
+	<title>AdaDeal.com | Konfirmasi Pembayaran</title>
+	<link href="../css/base.css" rel="stylesheet" type="text/css">
+	<link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/part.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script> 
+
+<script>
+jQuery("document").ready(function($){
+		 var nav = $('#headerArea');
+		 var logo = $('.logoBlockA01');
+		 var gnav = $('.gnavArea');
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 150) {
+					nav.removeClass("headerArea");
+					nav.addClass("headerAreaScroll");
+					
+					logo.removeClass("logoBlockA01");
+					logo.addClass("logoBlockA01Scroll");
+					
+					gnav.removeClass("gnavArea");
+					gnav.addClass("gnavAreaScroll");
+				} else {
+					nav.removeClass("headerAreaScroll");
+					nav.addClass("headerArea");
+					
+					logo.removeClass("logoBlockA01Scroll");
+					logo.addClass("logoBlockA01");
+					
+					gnav.removeClass("gnavAreaScroll");
+					gnav.addClass("gnavArea");
+				}
+			});
+		});
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top-150
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+</script>
+</head>
+<body>
+	<!--#wrap-->
+	<div id="wrap">
+    	<!--#headerArea-->
+		<div id="headerArea" class="headerArea">
+			<div class="headerBlockA01">
+                <div class="headerWrapBlockA01">
+                    <div class="columnBlockA01">
+                        <img class="logoBlockA01" src="../images/logo.png" alt="logo ada deal">
+                    </div>
+                    <!--/.columnBlockA01-->
+                    <div class="columnBlockA02">
+                        <form>
+                            <input name="search" type="search" placeholder="Cari deal...">
+                            <input type="submit" value="" onClick="cleardata()">
+                        </form>
+                    </div>
+                    <!--/.columnBlockA02-->
+                    <div class="columnBlockA03">
+                        <div class="chartBlockA01"><p>0</p></div>
+                        <div class="chartBlockA02"><a href="../cart/index.html"><img src="../images/add17.png" alt="chart icon" width="30" height="30"></a></div>
+                        <div class="chartBlockA03"><a href="../cart/index.html">Keranjang</a></div>
+                    </div>
+                    <!--/.columnBlockA03-->
+                    <div class="columnBlockA04">
+                        <div class="accountBlockA02">
+                        	<input type="checkbox" id="toggle" class="togel">
+							<label for="toggle"><img src="../images/user.png" width="25" height="30" alt=""/>Akun</label>
+                            <div class="loginBlockA01">
+                          		<ul class="listLoginBlockA01">
+                            		<input name="username" id="username" placeholder="nama akun" type="text">
+                            		<input name="password" id="password" value="" placeholder="kata sandi" type="password" onkeypress="if (event.keyCode==13){document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;}" >
+                                    <div class="clearfix"></div>
+                                    <div class="columnBlockA11">
+                                        <div class="columnBlockA13">
+                                        	<a href="#">lupa password?</a><br>
+                                        </div>
+                                        <!--./columnBlockA13-->
+                                        <div class="columnBlockA14">
+                                        	<input type="checkbox" id="cekboks">
+                                        	<label for="cekboks">Ingat saya</label>
+                                        </div>
+                                        <!--./columnBlockA14-->
+                                    </div>
+                                    <!--./columnBlockA11-->
+                                    <div class="columnBlockA12">
+                                    	<input type="submit" value="Masuk" onClick="document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;">
+                                    </div>
+                                    <!--./columnBlockA12-->
+                                    <div class="clearfix"></div>
+                                    <hr class="hrBlockA01">
+                                    <div class="columnBlockA15">
+                                    	<p>atau daftar dengan : </p>
+                                    </div>
+                                    <!--./columnBlockA15-->
+                                    <div class="columnBlockA16">
+                                    	<ul class="social">
+                                            <a href="https://www.facebook.com/" id="a-login-facebook">
+                                                <li class="sprite-social" id="facebook">FACEBOOK</li>
+                                            </a>
+                                            <a href="https://twitter.com/" id="a-login-twitter">
+                                                <li class="sprite-social" id="twitter">TWITTER</li>
+                                            </a>
+                                            <a href="https://plus.google.com/" id="a-login-google">
+                                                <li class="sprite-social" id="google">GOOGLEPLUS</li>
+                                            </a>
+										</ul>
+                                        <!--/ul.social-->
+                                    </div>
+                                    <!--./columnBlockA16-->
+                                    <hr class="hrBlockA01">
+                                    <div class="columnBlockA17">
+                                    	<p>New to AdaDeal?</p>
+                                    </div>
+                                    <!--./columnBlockA17-->
+                                    <button onClick="window.location.href='../register/index.html'">DAFTAR SEKARANG</button>
+                          		</ul>
+                                <!--./ul.listloginBlockA01-->
+                            </div>
+                            <!--./loginBlockA01-->
+                    	</div>
+                      	<!--/.accountBlockA02-->
+                    </div>
+                    <!--/.columnBlockA04-->
+                    <div class="clearfix"></div>
+                </div>
+                <!--/.headerWrapBlockA01-->
+			</div>
+            <!--/.headerBlockA01-->
+ 			<div id="gnavArea" class="gnavArea">
+                <div class="gnavAreaWrap">
+                    <ul>
+                        <li class="listBlockA01"><a href="../index.html">Semua Deal</a></li>
+                        <li class="listBlockA01"><a href="../makanan/index.html">Makanan</a>
+                            <ul>
+                                <li><a href="../makanan/menu_utama.html">Menu Utama</a></li>
+                                <li><a href="../makanan/penutup.html">Penutup</a></li>
+                                <li><a href="../makanan/minuman.html">Minuman</a></li>
+                                <li><a href="../makanan/cepat_saji.html">Cepat Saji</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../kecantikan/index.html">Kecantikan</a>
+                            <ul>
+                                <li><a href="../kecantikan/kosmetik.html">Kosmetik</a></li>
+                                <li><a href="../kecantikan/gigi.html">Gigi</a></li>
+                                <li><a href="../kecantikan/kulit.html">Kulit</a></li>
+                                <li><a href="../kecantikan/lainnya.html">Lainnya</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../pelayanan/index.html">Pelayanan</a>
+                            <ul>
+                                <li><a href="../pelayanan/otomotif.html">Otomotif</a></li>
+                                <li><a href="../pelayanan/pernikahan.html">Pernikahan</a></li>
+                                <li><a href="../pelayanan/rumah_tangga.html">Rumah Tangga</a></li>
+                                <li><a href="../pelayanan/fotografi.html">Fotografi</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../produk/index.html">Produk</a>
+                            <ul>
+                                <li><a href="../produk/elektronik.html">Elektronik</a></li>
+                                <li><a href="../produk/gadget.html">Gadget</a></li>
+                                <li><a href="../produk/pakaian.html">Pakaian</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../perjalanan/index.html">Perjalanan</a>
+                            <ul>
+                                <li><a href="../perjalanan/nasional.html">Nasional</a></li>
+                                <li><a href="../perjalanan/internasional.html">Internasional</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+            	</div>
+                <!--gnavAreaWrap-->
+			</div>
+            <!--/#gnavArea-->
+        </div>
+        <!-- /#headerArea -->
+        <div id="wrapInner">
+            <div id="mainArea">
+              <div id="breadcrumb">
+				<ul>
+					<li><a href="../index.html"><img src="../images/content_ico_001.png" width="21" height="16"></a></li>
+                    <li>&#62;</li>
+                    <li>Bantuan</li>
+                </ul>
+              </div>				            	
+              <!-- #breadcrumb -->             
+                <div id="contentArea">
+					<div class="helpTitleBlockA01">
+						<h3 id="beli">Cara Beli</h3>
+                        <div class="helpColumnBlockA01">
+                            <img src="images/MockUp-Bantuan-27_01_09.png" width="170" height="95" alt="Masuk">
+                            <p class="imageTitle">Masuk</p>
+                            <p class="imageDescript">Kunjungi AdaDeal.com Klik 'Daftar' lalu masukkan email</p>
+                        </div>
+                        <!--./helpColumnBlockA01-->        
+                        <div class="helpColumnBlockA01">
+                            <img src="images/MockUp-Bantuan-27_01_10.png" width="170" height="95" alt="Beli">
+                            <p class="imageTitle">Beli</p>
+                            <p class="imageDescript">Klik tombol beli di deal yang dipilih</p>
+                        </div>
+                        <!--./helpColumnBlockA01-->        
+                        <div class="helpColumnBlockA01">
+                            <img src="images/MockUp-Bantuan-27_01_14.png" width="170" height="95" alt="Bayar">
+                            <p class="imageTitle">Bayar</p>
+                            <p class="imageDescript">Bayarlah order sesuai dengan metode yang telah dipilih</p>
+                        </div>
+                        <!--./helpColumnBlockA01-->        
+                        <div class="helpColumnBlockA01">
+                            <img src="images/MockUp-Bantuan-27_01_15.png" width="170" height="95" alt="konfirmasi">
+                            <p class="imageTitle">Konfirmasi</p>
+                            <p class="imageDescript">Konfirmasi pembayaran melalui menu 'Akunku'</p>
+                        </div>
+                        <!--./helpColumnBlockA01-->        
+                        <div class="helpColumnBlockA01">
+                            <img src="images/MockUp-Bantuan-27_01_17.png" width="170" height="95" alt="Cetak">
+                            <p class="imageTitle">Cetak</p>
+                            <p class="imageDescript">Cetak voucher dan nikmati!</p>
+                        </div>
+                        <!--./helpColumnBlockA01-->    
+                        <div class="clearfix"></div>    
+                    </div>
+                    <!--./helpTitleBlockA01-->
+					<div class="helpTitleBlockA01">
+						<h3 id="kerja">Cara Kerja</h3>
+						<div class="helpBlockB01">
+                        	<img src="images/MockUp-Bantuan-299_24.png" width="130" height="47" alt="Adadeal icon">
+                            <p>AdaDeal adalah situs yang menawarkan kupon diskon terbaik hingga 90% untuk wisata,liburan secara lokal  dan internasional, perawatan kecantikan, produk-produk terbaru, gadgets dan masih banyak lagi</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--./helpBlockB01-->                         
+						<div class="helpBlockB01">
+                        	<img src="images/MockUp-Bantuan-299_27.png" width="130" height="47" alt="email icon">
+                            <p>Daftarkan email Anda di AdaDeal dan dapatkan Deal Alerts atau kunjungi situs AdaDeal untuk mendapatkan penawaran baru yang seru setiap hari</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--./helpBlockB01-->                                                 
+						<div class="helpBlockB01">
+                        	<img src="images/MockUp-Bantuan-299_30.png" width="130" height="47" alt="Voucher icon">
+                            <p>Dapatkan voucher AdaDeal dengan 3 cara mudah: klik Beli, lakukan pembayaran dan dapatkan vouchernya</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--./helpBlockB01--> 
+						<div class="helpBlockB01">
+                        	<img src="images/MockUp-Bantuan_03.png" width="130" height="47" alt="Mobile Phone icon">
+                            <p>Anda bisa mencetak atau mendapatkan voucher AdaDeal via SMS melalui menu “Akunku” lalu klik “Kuponku”. Tunjukkan voucher ke merchant yang bersangkutan dan selamat menikmati!</p>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--./helpBlockB01--> 
+                    </div>
+                    <!--./helpTitleBlockA02-->
+					<div class="helpTitleBlockA01">
+                        <h3 id="undang">Undang Teman</h3>
+						<div class="helpBlockB01">
+                        	<img src="images/MockUp-Bantuan333_06.png" width="130" height="47" alt="Invitation icon">
+                            <ol>
+                                <li> Register menjadi anggota</li>
+                                <li> Masuk ke Akun  dan klik “Undang”</li>
+                                <li> Nikmati voucher promo Rp 25000 dari AdaDeal</li>
+                            </ol>  
+                            <div class="clearfix"></div>                          
+                        </div>
+                        <!--./helpBlockB01--> 
+                    </div>
+                    <!--./helpTitleBlockA03--> 
+					<div class="helpTitleBlockA01">
+						<div class="helpBlockB01">                    
+                            <h3 id="kredit">Pembelian Kredit</h3>
+                            <ol>
+                                <p class="helpTextBlockA01">Ketentuan Deal</p>
+                                <li>   Kredit merupakan Kredit AdaDeal senilai Rp 27.000</li>
+                                <li>   Kredit akan langsung ditambahkan ke akun Socialites setelah verifikasi pembayaran dilakukan</li>
+                                <li>   Kredit hanya berlaku untuk deal-deal yang ada di AdaDeal</li>
+                                <li>   Fitur undang teman untuk mendapatkan Rp 20.000 tidak diberlakukan pada deal ini</li>
+                                <li>   Tidak ada batasan pembelian Kredit AdaDeal untuk setiap akun</li>
+                                <li>   Tidak ada batasan penggunaan Kredit AdaDeal untuk setiap deal</li>
+                                <li>   Masa berlaku kredit yang Anda beli adalah 1 tahun</li>
+                                <li>   Kredit tidak dapat ditukar dengan uang</li>
+                                <li>   Kredit dapat digunakan kapan saja</li>
+                                <li>  Kredit tidak dapat dipindahtangankan dan digunakan sebagai hadiah</li>
+                            </ol>
+                            <ol>
+                                <p class="helpTextBlockA01">Syarat dan Ketentuan Standar AdaDeal</p>
+                                <li> Tidak dapat digabungkan dengan voucher/promosi lainnya</li>
+                                <li>  Voucher sudah termasuk pajak</li>
+                                <li>  Dapat dipindah-tangankan dan digunakan sebagai hadiah</li>
+                                <li>  Tidak dapat diuangkan untuk nilai yang tidak digunakan</li>
+                                <li>  Tidak dapat ditukar dengan uang dan dikembalikan ke pihak AdaDeal</li>
+                            </ol>                        
+                        </div>
+                        <!--./helpBlockB01-->                         
+                    </div>
+                    <!--./helpTitleBlockA04--> 
+                </div>
+                <!-- /#contentArea -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /#mainArea -->
+        </div>
+        <!-- /#wrapInner -->
+        <!-- footerArea-->
+        <div id="footerArea">
+        	<!-- #footerBlockA01 -->
+            <div id="footerBlockA01">
+                <!-- .footerWrapBlockA01 -->
+                <div class="footerWrapBlockA01">
+                    <!-- .leftFooter -->
+                    <div class="leftFooter">
+                    	<!-- .leftBlockA01 -->
+                        <div class="leftBlockA01">
+                            <h3>AdaDeal.com</h3>
+                            <ul>
+                                <li class="textMenu"><a href="../adadeal/index.html#tentang">Tentang Kami</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#kontak">Hubungi Kami</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#syarat">Syarat &amp; Ketentuan</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#pernyataan">Pernyataan Privasi</a></li>
+                            </ul>
+                       	</div>
+                        <div class="leftBlockA01">
+                            <h3>Bantuan</h3>
+                            <ul>
+                                <li class="textMenu"><a href="#beli">Cara Beli</a></li>
+                                <li class="textMenu"><a href="#kerja">Cara Kerja</a></li>
+                                <li class="textMenu"><a href="#undang">Undang Teman</a></li>
+                                <li class="textMenu"><a href="#kredit">Pembelian Kredit</a></li>
+                                <li class="textMenu"><a href="faq.html">FAQ</a></li>
+                            </ul>
+                       	</div>
+                        <div class="leftBlockA01">
+                            <div class="leftBlockB01">
+                                <h3>Temukan Kami</h3>
+                                <ul>
+                                    <li class="imgMenu"><a href="https://www.facebook.com/"><img src="../images/footer_img_001_ac.png.gif" width="45" height="36" alt="fbAdaDeal"/></a></li>
+                                    <li class="imgMenu"><a href="https://twitter.com/"><img src="../images/footer_img_002_ac.png.gif" width="45" height="36" alt="twitterAdaDeal"/></a></li>
+                                    <li><a href="https://plus.google.com/"><img src="../images/footer_img_003_ac.png.gif" width="45" height="36" alt="googleplusAdaDeal"/></a></li>
+                                </ul>
+                            </div>
+                            <div class="leftBlockB02">
+                                <h3>Metode Pembayaran</h3>
+                                <ul>
+                                    <li class="imgMenu"><a href="#"><img src="../images/footer_img_004_ac.png.gif" width="55" height="39" alt="visaAdaDeal"/></a></li>
+                                    <li class="imgMenu"><a href="#"><img src="../images/footer_img_005_ac.png.gif" width="55" height="39" alt="masterCardAdaDeal"/></a></li>
+                                    <li><a href="#"><img src="../images/footer_img_006_ac.png.gif" width="55" height="39" alt="PayPalAdaDeal"/></a></li>
+                                </ul>
+                            </div>
+                       	</div>
+                        <!-- /.leftBlockA01 -->
+                    </div>
+                    <!-- /.leftFooter -->
+                    <!-- .rightFooter -->
+                    <div class="rightFooter">
+                      <!-- .rightBlockA01 -->
+                      <div class="rightBlockA01">
+                      	<a href="../adadeal/index.html#kontak"><h3>PARTNER<br>WITH US</h3></a>
+                        <a href="../adadeal/index.html#kontak"><img src="../images/footer_img_007_ac.png.gif" width="173" height="95" alt="partnerAdaDeal"/></a>
+                      </div>
+                      <!-- /.rightBlockA01 -->
+                    </div>
+                    <!-- /.right -->
+                </div>
+                <!-- /.footerWrapBlockA01 -->
+            </div>
+            <!-- /#footerBlockA01 -->
+            <!-- #footerBlockA02 -->
+            <div id="footerBlockA02">
+            	<!-- .footerWrapBlockA02 -->
+                <div class="footerWrapBlockA02">
+                	<p>&copy;AdaDeal.com 2014 Copyright All Rights Reserved</p>
+                </div>
+                <!-- /.footerWrapBlockA02 -->
+            </div>
+            <!-- /#footerBlockA02 -->
+        </div>
+        <!-- /#footerArea -->
+    </div>
+    <!-- /#wrap -->
+
+</body>
+</html>

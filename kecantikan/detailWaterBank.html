@@ -1,0 +1,478 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="keywords" content="kupon, coupon, deal, adadeal, jual, murah">
+    <!--For Ie Compatible-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+	<!--For Ie Compatible-->    
+	<title>Adadeal.com | Laneige Water Bank</title>
+	<link href="../css/base.css" rel="stylesheet" type="text/css">
+	<link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/part.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.png">
+	<script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/font.js"></script>
+    <script type="text/javascript" src="../js/flipclock.js"></script>
+<script>
+jQuery("document").ready(function($){
+		 var nav = $('#headerArea');
+		 var logo = $('.logoBlockA01');
+		 var gnav = $('.gnavArea');
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 150) {
+					nav.removeClass("headerArea");
+					nav.addClass("headerAreaScroll");
+					
+					logo.removeClass("logoBlockA01");
+					logo.addClass("logoBlockA01Scroll");
+					
+					gnav.removeClass("gnavArea");
+					gnav.addClass("gnavAreaScroll");
+				} else {
+					nav.removeClass("headerAreaScroll");
+					nav.addClass("headerArea");
+					
+					logo.removeClass("logoBlockA01Scroll");
+					logo.addClass("logoBlockA01");
+					
+					gnav.removeClass("gnavAreaScroll");
+					gnav.addClass("gnavArea");
+				}
+			});
+		
+		var _SlideshowTransitions = [
+		//Fade
+		{ $Duration: 1200, $Opacity: 2 }
+		];
+		var options = {
+			$AutoPlay: true,                   
+			$AutoPlaySteps: 1,                
+			$AutoPlayInterval: 3000,           
+			$PauseOnHover: 1,                  
+
+			$ArrowKeyNavigation: true,   		
+			$SlideDuration: 500,               
+			$MinDragOffsetToSlide: 20,          
+			//$SlideWidth: 600,                 
+			//$SlideHeight: 300,                            
+			$SlideSpacing: 0, 					                
+			$DisplayPieces: 1,                                  
+			$ParkingPosition: 0,                                
+			$UISearchMode: 1,                                   
+			$PlayOrientation: 1,                                
+			$DragOrientation: 3,                                
+
+			$SlideshowOptions: {                               
+				$Class: $JssorSlideshowRunner$,                 
+				$Transitions: _SlideshowTransitions,           
+				$TransitionsOrder: 1,                          
+				$ShowLink: true                                   
+			},
+			$BulletNavigatorOptions: {                             
+				$Class: $JssorBulletNavigator$,                    
+				$ChanceToShow: 0,                           
+				$AutoCenter: 1,                                 
+				$Steps: 1,                                      
+				$Lanes: 1,                                      
+				$SpacingX: 10,                                 
+				$SpacingY: 10,                                 
+				$Orientation: 1                              
+			},
+
+			$ArrowNavigatorOptions: {
+				$Class: $JssorArrowNavigator$,            
+				$ChanceToShow: 0,                        
+				$Steps: 1                               
+			}
+		};
+		var jssor_slider1 = new $JssorSlider$("sliderBlockA01", options);
+
+		function ScaleSlider() {
+			var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+			if (parentWidth)
+				jssor_slider1.$ScaleWidth(Math.min(parentWidth, 940));
+			else
+				window.setTimeout(ScaleSlider, 30);
+		}
+		ScaleSlider();
+		if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+			$(window).bind('resize', ScaleSlider);
+		}
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(220880);
+		    clock.setCountdown(true);
+		    clock.start();
+});
+</script>
+</head>
+<body>
+<!--#wrap-->
+<div id="wrap">
+    <!--#headerArea-->
+    <div id="headerArea" class="headerArea">
+        <div class="headerBlockA01">
+            <div class="headerWrapBlockA01">
+                <div class="columnBlockA01">
+                    <a href="../index.html"><img class="logoBlockA01" src="../images/logo.png" alt="logo ada deal"></a>
+                </div>
+                <!--/.columnBlockA01-->
+                <div class="columnBlockA02">
+                    <form>
+                        <input name="search" type="search" placeholder="Cari deal...">
+                        <input type="submit" value="" onClick="cleardata()">
+                    </form>
+                </div>
+                <!--/.columnBlockA02-->
+                <div class="columnBlockA03">
+                    <div class="chartBlockA01"><p>0</p></div>
+                    <div class="chartBlockA02"><a href="../index.html"><img src="../images/add17.png" alt="chart icon" width="30" height="30"></a></div>
+                    <div class="chartBlockA03"><a href="#">Keranjang</a></div>
+                </div>
+                <!--/.columnBlockA03-->
+                <div class="columnBlockA04">
+                    <div class="accountBlockA02">
+                        <input type="checkbox" id="toggle" class="togel">
+                        <label for="toggle"><img src="../images/user.png" width="25" height="30" alt=""/>Akun</label>
+                        <div class="loginBlockA01">
+                            <ul class="listLoginBlockA01">
+                                <input name="username" id="username" placeholder="nama akun" type="text">
+                                <input name="password" id="password" value="" placeholder="kata sandi" type="password" onkeypress="if (event.keyCode==13){document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;}" >
+                                <div class="clearfix"></div>
+                                <div class="columnBlockA11">
+                                    <div class="columnBlockA13">
+                                        <a href="#">lupa password?</a><br>
+                                    </div>
+                                    <!--./columnBlockA13-->
+                                    <div class="columnBlockA14">
+                                        <input type="checkbox" id="cekboks">
+                                        <label for="cekboks">Ingat saya</label>
+                                    </div>
+                                    <!--./columnBlockA14-->
+                                </div>
+                                <!--./columnBlockA11-->
+                                <div class="columnBlockA12">
+                                    <input type="submit" value="Masuk" onClick="document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;">
+                                </div>
+                                <!--./columnBlockA12-->
+                                <div class="clearfix"></div>
+                                <hr class="hrBlockA01">
+                                <div class="columnBlockA15">
+                                    <p>atau daftar dengan : </p>
+                                </div>
+                                <!--./columnBlockA15-->
+                                <div class="columnBlockA16">
+                                    <ul class="social">
+                                        <a href="#" id="a-login-facebook">
+                                            <li class="sprite-social" id="facebook">FACEBOOK</li>
+                                        </a>
+                                        <a href="#" id="a-login-twitter">
+                                            <li class="sprite-social" id="twitter">TWITTER</li>
+                                        </a>
+                                        <a href="#" id="a-login-google">
+                                            <li class="sprite-social" id="google">GOOGLEPLUS</li>
+                                        </a>
+                                    </ul>
+                                    <!--/ul.social-->
+                                </div>
+                                <!--./columnBlockA16-->
+                                <hr class="hrBlockA01">
+                                <div class="columnBlockA17">
+                                    <p>New to AdaDeal?</p>
+                                </div>
+                                <!--./columnBlockA17-->
+                                <button>DAFTAR SEKARANG</button>
+                            </ul>
+                            <!--./ul.listloginBlockA01-->
+                        </div>
+                        <!--./loginBlockA01-->
+                    </div>
+                    <!--/.accountBlockA02-->
+                </div>
+                <!--/.columnBlockA04-->
+                <div class="clearfix"></div>
+            </div>
+            <!--/.headerWrapBlockA01-->
+        </div>
+        <!--/.headerBlockA01-->
+        <div id="gnavArea" class="gnavArea">
+            <div class="gnavAreaWrap">
+                <ul>
+                    <li class="listBlockA01"><a href="../index.html">Semua Deal</a></li>
+                    <li class="listBlockA01"><a href="../makanan/index.html">Makanan</a>
+                        <ul>
+                            <li><a href="../makanan/menu_utama.html">Menu Utama</a></li>
+                            <li><a href="../makanan/penutup.html">Penutup</a></li>
+                            <li><a href="../makanan/minuman.html">Minuman</a></li>
+                            <li><a href="../makanan/cepat_saji.html">Cepat Saji</a></li>
+                        </ul>
+                    </li>
+                    <li class="listBlockA01"><a href="index.html">Kecantikan</a>
+                        <ul>
+                            <li><a href="kosmetik.html">Kosmetik</a></li>
+                            <li><a href="gigi.html">Gigi</a></li>
+                            <li><a href="kulit.html">Kulit</a></li>
+                            <li><a href="lainnya.html">Lainnya</a></li>
+                        </ul>
+                    </li>
+                    <li class="listBlockA01"><a href="../pelayanan/index.html">Pelayanan</a>
+                        <ul>
+                            <li><a href="../pelayanan/otomotif.html">Otomotif</a></li>
+                            <li><a href="../pelayanan/pernikahan.html">Pernikahan</a></li>
+                            <li><a href="../pelayanan/rumah_tangga.html">Rumah Tangga</a></li>
+                            <li><a href="../pelayanan/fotografi.html">Fotografi</a></li>
+                        </ul>
+                    </li>
+                    <li class="listBlockA01"><a href="../produk/index.html">Produk</a>
+                        <ul>
+                            <li><a href="../produk/elektronik.html">Elektronik</a></li>
+                            <li><a href="../produk/gadget.html">Gadget</a></li>
+                            <li><a href="../produk/pakaian.html">Pakaian</a></li>
+                        </ul>
+                    </li>
+                    <li class="listBlockA01"><a href="../perjalanan/index.html">Perjalanan</a>
+                        <ul>
+                            <li><a href="../perjalanan/nasional.html">Nasional</a></li>
+                            <li><a href="../perjalanan/internasional.html">Internasional</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <!--gnavAreaWrap-->
+        </div>
+        <!--/#gnavArea-->
+    </div>
+    <!-- /#headerArea -->
+    <div id="wrapInner">
+        <div id="mainArea">
+            <div id="breadcrumb">
+                <ul>
+                    <li><a href="../index.html"><img src="../images/content_ico_001.png" width="21" height="16"></a></li>
+                    <li>&#62;</li>
+                    <li><a href="index.html">Kecantikan</a></li>
+                    <li>&#62;</li>
+                    <li><a href="kosmetik.html">Kosmetik</a></li>
+                    <li>&#62;</li>
+                    <li>Water Bank</li>                    
+                </ul>
+            </div>				            	
+            <!-- #breadcrumb -->         
+            <div class="bannerBlockA01">
+                <div id="sliderBlockA01" style="position: relative; top: 0px; left: 0px; width: 940px; height: 370px; overflow: hidden; ">
+                    <!-- Loading Screen -->
+                    <div u="loading" class="sliderBlockA02">
+                        <div class="sliderBlockA03">
+                        </div>
+                        <!--/.sliderBlockA03-->
+                        <div class="sliderBlockA04">
+                        </div>
+                        <!--/.sliderBlockA04-->
+                    </div>
+                    <!--/.sliderBlockA02-->
+                    <!-- Slides Container -->
+                    <div u="slides" class="sliderBlockA05">
+                        <div><a href="detailWaterBank.html"><img u="image" src="images/Wajah/slider_img_001.png"/></a></div>
+                    </div>
+                    <!--/.sliderBlockA05-->
+                    <!-- bullet navigator container -->
+                    <div u="navigator" class="bulletNavBlockA01">
+                        <!-- bullet navigator item prototype -->
+                        <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+                    </div>
+                    <!-- Bullet Navigator Skin End -->
+                    <!-- Arrow Navigator Skin Begin -->
+                   
+                    <!-- Arrow Left -->
+                    <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;">
+                    </span>
+                    <!-- Arrow Right -->
+                    <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px">
+                    </span>
+                    <!-- Arrow Navigator Skin End -->
+                    <a style="display: none" href="http://www.jssor.com">javascript image slider</a>
+            </div>
+            <!--sliderBlockA01 - Jssor Slider End -->
+            </div>
+            <!-- /#bannerBlockA01-->
+            <div id="contentArea">
+                <!--.contentBlockC01-->
+                <div class="detailColumnBlockD01">
+                    <ul>
+                        <li class="originalPrice">Rp 224.000,-</li>
+                        <li class="newPrice">Rp 56.000,-</li>
+                        <li class="discount">
+                            <p class="pleft">Hemat</p> 
+                            <p class="pright">75%</p>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li class="sold">
+                            <p class="pleft">Terjual</p> 
+                            <p class="pright">50</p>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li><a href="../cart/index.html"><button>Beli</button></a></li>
+                        <li class="detailColumnBlockD11">
+                            <p>Waktu yang tersisa : </p>
+                            <div class="clock" style="margin:8px 2em 0;"></div>
+                            <div class="message"></div> 
+                        </li>
+                        <li class="shareBlockD01">
+                        	<span class='st_facebook_hcount' displayText='Facebook'></span>
+                            <span class='st_twitter_hcount' displayText='Tweet'></span>
+                        </li>
+                    </ul>
+                </div>
+                <!--.detailColumnBlockD01-->
+                <div class="detailColumnBlockD02">
+                    <h3>Ketentuan standar AdaDeal</h3>
+                    <ul>
+                        <li>Voucher AdaDeal dapat dipindah-tangankan dan digunakan sebagai hadiah.</li>
+                        <li>Voucher AdaDeal sudah termasuk pajak.</li>
+                        <li>Voucher AdaDeal tidak dapat digabungkan dengan voucher/promosi lainnya.</li>
+                        <li>Voucher AdaDeal tidak dapat diuangkan kembali.</li>
+                        <li>Selisih nilai voucher AdaDeal yang tersisa tidak dapat diuangkan kembali.</li>
+                        <li>Voucher yang tidak dan atau belum digunakan setelah masa berlaku berakhir akan dianggap hangus.</li>
+                    </ul>
+                    <h3>Pembayaran</h3>
+                    <ul>
+                        <li>Pembayaran voucher harus dilakukan dalam kurun waktu <strong>1 x 24 jam setelah melakukan order</strong></li>
+                        <li>Untuk mempercepat proses verifikasi pembayaran silahkan pilih menu pembayaran <strong>ATM BCA, KlikBCA, KlikPay, Kartu Kredit VISA &amp; MasterCard, atau Kredit AdaDeal</strong></li>
+                    </ul>
+                </div>
+                <!--.detailColumnBlockD01-->
+                <div class="detailColumnBlockD03">
+                    <h3>Syarat dan Ketentuan Umum</h3>
+                    <ul>
+                        <li>Voucher berlaku mulai dari <strong>15 Oktober 2014 &ndash; 31 Oktober 2014</strong></li>
+                        <li>Jam operasional : 08.00-21.00</li>
+                        <li>Berlaku untuk <strong>semua outlet SOGO Indonesia</strong></li>
+                        <li>Voucher tidak dapat digabungkan dengan promosi lain</li>
+                        <li>Voucher dikirimkan melalui email</li>
+                        <li>Voucher tidak dapat digunakan jika masa berlaku telah habis</li>
+                    </ul>
+                    <h3>Paket Voucher</h3>
+                    <ul>
+                        <li>1 buah pencuci muka 50ml</li>
+                        <li>1 buah day cream 50ml</li>
+                        <li>1 buah night cream 50ml</li>
+                        <li>1 buah eye cream 50ml</li>
+                    </ul>
+                </div>
+                <!--.detailColumnBlockD01--> 
+                <div class="clearfix"></div>                   
+                <div class="detailColumnBlockD04">
+                    <div class="sideDetailColumnBlockD04">                	
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3967.097575693032!2d106.787881!3d-6.117566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d960cbf8acd%3A0x407680701a693417!2sLaneige+Indonesia.+PT!5e0!3m2!1sid!2sid!4v1413874783674" width="282" height="300" frameborder="0" style="border:0"></iframe>
+                            <h4><a href="https://www.google.co.id/maps/place/Laneige+Indonesia.+PT/@-6.117566,106.787881,17z/data=!4m2!3m1!1s0x2e6a1d960cbf8acd:0x407680701a693417">Lokasi Laneige</a></h4>
+                    </div>
+                    <!--./sideDetailColumnBlockD04-->                
+                	<div class="contentDetailColumnBlockD01">                
+                        <h3>Laneige</h3>
+                        <p>Laneige adalah perusahaan korea yang bergerak di bidang kecantikan. Laneige mempelajari air sebagai dasar kebutuhan manusia. Pada kesempatan ini, Laneige menawarkan water bank untuk merawat dan menjaga kulit Anda baik saat siang maupun malam. Nikmatilah kulit indah dan bersih bersama Laneige. Nantikan promosi selanjutnya dari Laneige </p>
+                        <h3>Lokasi</h3>
+                        <p>outlet SOGO Indonesia</p>
+                    </div>
+                    <!--./contentDetailColumnBlockD01-->                         
+                </div>
+                <!--.detailColumnBlockD01-->
+            </div>
+            <!-- /#contentArea -->
+            <div class="clearfix"></div>
+        </div>
+        <!-- /#mainArea -->
+    </div>
+    <!-- /#wrapInner -->
+    <!-- footerArea-->
+    <div id="footerArea">
+        <!-- #footerBlockA01 -->
+        <div id="footerBlockA01">
+            <!-- .footerWrapBlockA01 -->
+            <div class="footerWrapBlockA01">
+                <!-- .leftFooter -->
+                <div class="leftFooter">
+                    <!-- .leftBlockA01 -->
+                    <div class="leftBlockA01">
+                        <h3>AdaDeal.com</h3>
+                        <ul>
+                            <li class="textMenu"><a href="../adadeal/index.html#tentang">Tentang Kami</a></li>
+                            <li class="textMenu"><a href="../adadeal/index.html#kontak">Hubungi Kami</a></li>
+                            <li class="textMenu"><a href="../adadeal/index.html#syarat">Syarat &amp; Ketentuan</a></li>
+                            <li class="textMenu"><a href="../adadeal/index.html#pernyataan">Pernyataan Privasi</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftBlockA01">
+                        <h3>Bantuan</h3>
+                        <ul>
+                            <li class="textMenu"><a href="../bantuan/index.html#beli">Cara Beli</a></li>
+                            <li class="textMenu"><a href="../bantuan/index.html#kerja">Cara Kerja</a></li>
+                            <li class="textMenu"><a href="../bantuan/index.html#undang">Undang Teman</a></li>
+                            <li class="textMenu"><a href="../bantuan/index.html#kredit">Pembelian Kredit</a></li>
+                            <li class="textMenu"><a href="../bantuan/faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="leftBlockA01">
+                        <div class="leftBlockB01">
+                            <h3>Temukan Kami</h3>
+                            <ul>
+                                <li class="imgMenu"><a href="#"><img src="../images/footer_img_001_ac.png.gif" width="45" height="36" alt="fbAdaDeal"/></a></li>
+                                <li class="imgMenu"><a href="#"><img src="../images/footer_img_002_ac.png.gif" width="45" height="36" alt="twitterAdaDeal"/></a></li>
+                                <li><a href="#"><img src="../images/footer_img_003_ac.png.gif" width="45" height="36" alt="googleplusAdaDeal"/></a></li>
+                            </ul>
+                        </div>
+                        <div class="leftBlockB02">
+                            <h3>Metode Pembayaran</h3>
+                            <ul>
+                                <li class="imgMenu"><a href="#"><img src="../images/footer_img_004_ac.png.gif" width="55" height="39" alt="visaAdaDeal"/></a></li>
+                                <li class="imgMenu"><a href="#"><img src="../images/footer_img_005_ac.png.gif" width="55" height="39" alt="masterCardAdaDeal"/></a></li>
+                                <li><a href="#"><img src="../images/footer_img_006_ac.png.gif" width="55" height="39" alt="PayPalAdaDeal"/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.leftBlockA01 -->
+                </div>
+                <!-- /.leftFooter -->
+                <!-- .rightFooter -->
+                <div class="rightFooter">
+                  <!-- .rightBlockA01 -->
+                  <div class="rightBlockA01">
+                    <a href="../adadeal/index.html/#kontak"><h3>PARTNER<br>WITH US</h3></a>
+                    <a href="#"><img src="../images/footer_img_007_ac.png.gif" width="173" height="95" alt="partnerAdaDeal"/></a>
+                  </div>
+                  <!-- /.rightBlockA01 -->
+                </div>
+                <!-- /.right -->
+            </div>
+            <!-- /.footerWrapBlockA01 -->
+        </div>
+        <!-- /#footerBlockA01 -->
+        <!-- #footerBlockA02 -->
+        <div id="footerBlockA02">
+            <!-- .footerWrapBlockA02 -->
+            <div class="footerWrapBlockA02">
+                <p>&copy;AdaDeal.com 2014 Copyright All Rights Reserved</p>
+            </div>
+            <!-- /.footerWrapBlockA02 -->
+        </div>
+        <!-- /#footerBlockA02 -->
+    </div>
+    <!-- /#footerArea -->
+</div>
+<!-- /#wrap -->
+</body>
+<script type="text/javascript" src="../js/buttons.js"></script>
+</html>

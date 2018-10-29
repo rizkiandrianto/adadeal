@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="keywords" content="kupon, coupon, deal, adadeal, jual, murah">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+	<title>AdaDeal.com | Semua Tentang Kami</title>
+	<link href="../css/base.css" rel="stylesheet" type="text/css">
+	<link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/part.css" rel="stylesheet" type="text/css">
+   	<link rel="shortcut icon" href="../images/favicon.png">
+	<script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script type='text/javascript' src='../js/jquery-1.8.3.js'></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script> 
+    <script type="text/javascript" src="../js/font.js"></script>
+	<script>
+	$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top-150
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+		
+jQuery("document").ready(function($){
+		 var nav = $('#headerArea');
+		 var logo = $('.logoBlockA01');
+		 var gnav = $('.gnavArea');
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 150) {
+					nav.removeClass("headerArea");
+					nav.addClass("headerAreaScroll");
+					
+					logo.removeClass("logoBlockA01");
+					logo.addClass("logoBlockA01Scroll");
+					
+					gnav.removeClass("gnavArea");
+					gnav.addClass("gnavAreaScroll");
+				} else {
+					nav.removeClass("headerAreaScroll");
+					nav.addClass("headerArea");
+					
+					logo.removeClass("logoBlockA01Scroll");
+					logo.addClass("logoBlockA01");
+					
+					gnav.removeClass("gnavAreaScroll");
+					gnav.addClass("gnavArea");
+				}
+			});
+		
+		var _SlideshowTransitions = [
+		//Fade
+		{ $Duration: 1200, $Opacity: 2 }
+		];
+		var options = {
+			$AutoPlay: true,                   
+			$AutoPlaySteps: 1,                
+			$AutoPlayInterval: 3000,           
+			$PauseOnHover: 1,                  
+
+			$ArrowKeyNavigation: true,   		
+			$SlideDuration: 500,               
+			$MinDragOffsetToSlide: 20,          
+			//$SlideWidth: 600,                 
+			//$SlideHeight: 300,                            
+			$SlideSpacing: 0, 					                
+			$DisplayPieces: 1,                                  
+			$ParkingPosition: 0,                                
+			$UISearchMode: 1,                                   
+			$PlayOrientation: 1,                                
+			$DragOrientation: 3,                                
+
+			$SlideshowOptions: {                               
+				$Class: $JssorSlideshowRunner$,                 
+				$Transitions: _SlideshowTransitions,           
+				$TransitionsOrder: 1,                          
+				$ShowLink: true                                   
+			},
+			$BulletNavigatorOptions: {                             
+				$Class: $JssorBulletNavigator$,                    
+				$ChanceToShow: 1,                           
+				$AutoCenter: 1,                                 
+				$Steps: 1,                                      
+				$Lanes: 1,                                      
+				$SpacingX: 10,                                 
+				$SpacingY: 10,                                 
+				$Orientation: 1                              
+			},
+
+			$ArrowNavigatorOptions: {
+				$Class: $JssorArrowNavigator$,            
+				$ChanceToShow: 1,                        
+				$Steps: 1                               
+			}
+		};
+		var jssor_slider1 = new $JssorSlider$("sliderBlockA01", options);
+
+		function ScaleSlider() {
+			var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+			if (parentWidth)
+				jssor_slider1.$ScaleWidth(Math.min(parentWidth, 940));
+			else
+				window.setTimeout(ScaleSlider, 30);
+		}
+		ScaleSlider();
+		if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+			$(window).bind('resize', ScaleSlider);
+		}
+});
+
+		$(window).load(function(){
+			$('.columnBlockA02').find('form').append('<div class="hideresults"></div><div class="popup"></div>');
+			
+			$('.columnBlockA02').find('form').submit(function(e){
+				e.preventDefault();
+				var q = $(this).find('.cari').attr('value');
+				//Maybe some AJAX-y results here would be cool!
+				$('.columnBlockA02').find('.popup').html( 'Mohon maaf, hasil pencarian ' + q + ' tidak ditemukan' ).show();
+				$('.hideresults').show();
+			});
+			
+			$('.columnBlockA02').find('.hideresults').click(function(e){
+				$(this).hide();
+				$('.columnBlockA02').find('.popup').hide();
+				$('.columnBlockA02').find('.cari').val('');
+			});
+			$('.columnBlockA02').find('.cari').blur(function(e){
+				$('.columnBlockA02').find('.cari').val('');
+				$('.columnBlockA02').find('.popup').hide();
+				$('.columnBlockA02').find('.hideresults').hide();
+			});
+			});
+</script>
+</head>
+<body>
+	<!-- #wrap -->
+	<div id="wrap">
+    	<!-- #headerArea -->
+		<div id="headerArea" class="headerArea">
+        	<!-- .headerBlockA01 -->
+			<div class="headerBlockA01">
+            	<!-- .headerWrapBlockA01 -->
+                <div class="headerWrapBlockA01">
+                	<!-- .columnBlockA01 -->
+                    <div class="columnBlockA01">
+                        <a href="index.html"><img class="logoBlockA01" src="../images/logo.png" alt="logo ada deal"></a>
+                    </div>
+                    <!--/.columnBlockA01-->
+                    <div class="columnBlockA02">
+                        <form>
+                            <input class="cari" type="text" placeholder="Cari deal...">
+                            <input type="submit" value="" >
+                        </form>
+                    </div>
+                    <!--/.columnBlockA02-->
+                    <div class="columnBlockA03">
+                        <div class="chartBlockA01"><p class="chart">0</p></div>
+                        <div class="chartBlockA02"><a href="../cart/index.html"><img src="../images/add17.png" alt="chart icon" width="30" height="30"></a></div>
+                        <div class="chartBlockA03"><a href="../cart/index.html">Keranjang</a></div>
+                    </div>
+                    <!--/.columnBlockA03-->
+                    <div class="columnBlockA04">
+                        <div class="accountBlockA02">
+                        	<input type="checkbox" id="toggle" class="togel">
+							<label for="toggle"><img src="../images/user.png" width="25" height="30" alt="user"/>Akun</label>
+                            <div class="loginBlockA01">
+                          		<ul class="listLoginBlockA01">
+                            		<input name="username" id="username" placeholder="nama akun" type="text">
+                            		<input name="password" id="password" value="" placeholder="kata sandi" type="password" onkeypress="if (event.keyCode==13){document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;}" >
+                                    <div class="clearfix"></div>
+                                    <div class="columnBlockA11">
+                                        <div class="columnBlockA13">
+                                        	<a href="#">lupa password?</a><br>
+                                        </div>
+                                        <!--./columnBlockA13-->
+                                        <div class="columnBlockA14">
+                                        	<input type="checkbox" id="cekboks">
+                                        	<label for="cekboks">Ingat saya</label>
+                                        </div>
+                                        <!--./columnBlockA14-->
+                                    </div>
+                                    <!--./columnBlockA11-->
+                                    <div class="columnBlockA12">
+                                    	<input type="submit" value="Masuk" onClick="document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;">
+                                    </div>
+                                    <!--./columnBlockA12-->
+                                    <div class="clearfix"></div>
+                                    <hr class="hrBlockA01">
+                                    <div class="columnBlockA15">
+                                    	<p>atau daftar dengan : </p>
+                                    </div>
+                                    <!--./columnBlockA15-->
+                                    <div class="columnBlockA16">
+                                    	<ul class="social">
+                                            <a href="#" id="a-login-facebook">
+                                                <li class="sprite-social" id="facebook">FACEBOOK</li>
+                                            </a>
+                                            <a href="#" id="a-login-twitter">
+                                                <li class="sprite-social" id="twitter">TWITTER</li>
+                                            </a>
+                                            <a href="#" id="a-login-google">
+                                                <li class="sprite-social" id="google">GOOGLEPLUS</li>
+                                            </a>
+										</ul>
+                                        <!--/ul.social-->
+                                    </div>
+                                    <!--./columnBlockA16-->
+                                    <hr class="hrBlockA01">
+                                    <div class="columnBlockA17">
+                                    	<p>New to AdaDeal?</p>
+                                    </div>
+                                    <!--./columnBlockA17-->
+                                    <button onClick="window.location.href='register/index.html'">DAFTAR SEKARANG</button>
+                          		</ul>
+                                <!--./ul.listloginBlockA01-->
+                            </div>
+                            <!--./loginBlockA01-->
+                    	</div>
+                      	<!--/.accountBlockA02-->
+                    </div>
+                    <!--/.columnBlockA04-->
+                    <div class="clearfix"></div>
+                </div>
+                <!--/.headerWrapBlockA01-->
+			</div>
+            <!--/.headerBlockA01-->
+ 			<div id="gnavArea" class="gnavArea">
+                <div class="gnavAreaWrap">
+                    <ul>
+                        <li class="listBlockA01"><a href="../index.html">Semua Deal</a></li>
+                        <li class="listBlockA01"><a href="../makanan/index.html">Makanan</a>
+                            <ul>
+                                <li><a href="../makanan/menu_utama.html">Menu Utama</a></li>
+                                <li><a href="../makanan/penutup.html">Penutup</a></li>
+                                <li><a href="../makanan/minuman.html">Minuman</a></li>
+                                <li><a href="../makanan/cepat_saji.html">Cepat Saji</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../kecantikan/index.html">Kecantikan</a>
+                            <ul>
+                                <li><a href="../kecantikan/kosmetik.html">Kosmetik</a></li>
+                                <li><a href="../kecantikan/gigi.html">Gigi</a></li>
+                                <li><a href="../kecantikan/kulit.html">Kulit</a></li>
+                                <li><a href="../kecantikan/lainnya.html">Lainnya</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../pelayanan/index.html">Pelayanan</a>
+                            <ul>
+                                <li><a href="../pelayanan/otomotif.html">Otomotif</a></li>
+                                <li><a href="../pelayanan/pernikahan.html">Pernikahan</a></li>
+                                <li><a href="../pelayanan/rumah_tangga.html">Rumah Tangga</a></li>
+                                <li><a href="../pelayanan/fotografi.html">Fotografi</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../produk/index.html">Produk</a>
+                            <ul>
+                                <li><a href="../produk/elektronik.html">Elektronik</a></li>
+                                <li><a href="../produk/gadget.html">Gadget</a></li>
+                                <li><a href="../produk/pakaian.html">Pakaian</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="perjalanan/index.html">Perjalanan</a>
+                            <ul>
+                                <li><a href="../produk/nasional.html">Nasional</a></li>
+                                <li><a href="../produk/internasional.html">Internasional</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+            	</div>
+                <!--gnavAreaWrap-->
+			</div>
+            <!--/#gnavArea-->
+        </div>
+        <!-- /#headerArea -->
+        <!-- #wrapInner -->
+        <div id="wrapInner">
+            <!-- #mainArea -->
+            <div id="mainArea">
+              <div id="breadcrumb">
+				<ul>
+					<li><a href="../index.html"><img src="../images/content_ico_001.png" width="21" height="16"></a></li>
+                    <li>&#62;</li>
+                    <li>Informasi AdaDeal</li>
+                </ul>
+              </div>				            	
+              <!-- #breadcrumb -->            
+              	<!-- #containArea -->
+              <div id="contentArea">
+                    <div id="tentang" class="tittleBlockC01">
+                        	<h2>Tentang</h2>
+                    </div>
+                    <h4>Sejarah</h4>
+                <p>AdaDeal pertama kali berdiri dengan nama DealKeren pada tahun 2010. Nama perusahaan kami berasal dari dua kata, yaitu Deal dan Keren, yang berarti "cool deal" dalam bahasa Inggris. Pendiri dan tim manajemen kami memiliki pengalaman puluhan tahun di bidang internet, pemasaran, periklanan, media, keuangan, telekomunikasi dan e-commerce seperti Apple, AskJeeves, Citi, British Telecom, Looksmart, Alcatel, Lucent, MSN dan DMS Group.
+<br>
+Pendiri kami juga merupakan pendiri Ensogo dan DMS Group (dmsasialimited.com), holding company dengan berbagai anak perusahaan termasuk Admax Network (admaxnetwork.com), Impaq Interactive (imaqinteractive.com) and Syndacast (syndacast.com). DMS Group memiliki kantor operasional di Singapura, Malaysia, Thailand, Vietnam, , Filipina dan Australia.
+<br>
+Pengalaman mereka memberikan kami nilai-nilai dan pelajaran berharga. Dengan gampang dapat kami simpulkan bahwa kesuksesan DealKeren tergantung dari kepuasan Anda sebagai konsumen.
+<br>
+Pada pertengahan tahun 2011, DealKeren bergabung dengan AdaDeal dan menjadi AdaDeal. AdaDeal adalah situs Daily Deals yang berbasis di Washington D.C. dan memiliki lebih dari 46 juta anggota di 25 negara! Dengan akuisi tersebut, AdaDeal akan membantu merchant mengembangkan bisnis mereka ke level berikutnya dengan penawaran dan strategi pemasaran yang lebih advance. Sedangkan bagi konsumen kami, mereka mendapatkan pengalaman berbelanja yang lebih seru dengan kejutan-kejutan baru di kalender mereka setiap hari.
+<br>
+AdaDeal menawarkan pengalaman unik dan mengajak setiap orang untuk mengeksplorasi dunianya. Kami percaya bahwa setiap hal yang kita lakukan mempengaruhi orang-orang di sekitar kita dan hidup itu bertujuan untuk menciptakan kenangan-kenangan indah bersama orang-orang tercinta.</p>
+<br>
+                    <h4>Tujuan, Visi, dan Misi</h4>
+                <p><strong>Tujuan Kami – Smart Shopping. Smart Spending.</strong>
+<br>
+Hidup adalah sebuah perjalanan petualang dan kami ingin Anda untuk mendapatkan hasil maksimal dari itu. Bisa jadi Anda tidak punya waktu untuk mencari tempat makan baru, spa yang patut dicoba, atau paket liburan murah, namun hey, AdaDeal punya itu semua (dan masih banyak lagi). Anda tak usah repot mencari referensi di majalah atau di manapun juga, karena tiap kali Anda ingin mencoba hal-hal baru, bukan saja AdaDeal.
+<br>
+Anda bekerja keras untuk mencari uang dan kami menghargai itu. Karena itu, kami dan partner kami, merchants terbaik dari penjuru kota memberikan diskon terbaik agar Anda dapat mencoba produk dan layanan mereka tanpa harus mengeluarkan biaya dalam jumlah besar. Mengapa menghabiskan lebih banyak jika Anda dapat menghabiskan lebih sedikit? Kami pun yakin Anda takkan keberatan datang kembali bila merchant tersebut memberikan layanan super seperti yang seharusnya.
+<br>
+<strong>Tujuan kami?</strong> Konsumen puas dan senang mendapatkan deal paling keren, merchant mendapatkan pelanggan baru dan promosi tanpa biaya dan kami pun mendapatkan keuntungan.
+<br>
+<strong>Visi Kami</strong><br>
+Untuk menjadi pionir dalam social commerce, terinspirasi tanggung jawab sosial.
+<br>
+<strong>Misi Kami</strong>
+We add surprise to every calendar. Semua deal yang ditawarkan oleh AdaDeal bertujuan agar konsumen kami mengeksplorasi dunianya, menjawab rasa ingin tahu dan spontanitas mereka.
+</p>
+<br>
+					<div id="kontak" class="tittleBlockC01">
+                        	<h2>Hubungi Kami</h2>
+                    </div>
+           	    <div class="columnBlockD01">
+                    	<p class="contact"><strong>AdaDeal Indonesia</strong><br>Gedung Sarana Jaya Lt. 6<br>Jl. Budi Kemuliaan No. 1<br>Jakarta Selatan 12345</p>
+                    </div>
+                <div class="columnBlockD01">
+                    	<p class="contact"><strong>Pelayanan Konsumen</strong><br>+6221-000000A<br>customercare@adadeal.com<br>Senin - Jumat : 09.00-17.00</p>
+                    </div>
+                <div class="columnBlockD01">
+                    	<p class="contact"><strong>Merchant/Business Owner</strong><br>+6221-000000B<br>business@adadeal.com<br>Senin - Jumat : 09.00-15.00</p>
+                    </div>
+                <div class="columnBlockD01">
+                    	<p class="contact"><strong>Karir dan Kerja</strong><br>+6221-000000C<br>jobs@adadeal.com<br>Senin - Jumat : 09.00-17.00</p>
+                    </div>
+                    <div class="clearfix"></div>
+                <div id="syarat" class="tittleBlockC01">
+                        	<h2>Syarat & Ketentuan</h2>
+                </div>
+                    <p><strong>1. Informasi Website</strong> <dl><dd>Sementara setiap upaya dilakukan untuk memperbarui informasi yang terdapat di website ini, baik AdaDeal atau pihak 	ketiga 
+	atau data atau penyedia konten membuat representasi atau jaminan, apakah menyatakan, terkandung dalam hukum atau 
+	sisa seperti untuk urutan, ketepatan, kelengkapan atau keandalan informasi, pendapat, informasi harga, penelitian informasi, 
+	data dan / atau konten yang terdapat pada situs web (termasuk namun tidak terbatas pada informasi yang mungkin disedia
+	kan oleh pihak ketiga atau data atau penyedia konten) dan tidak akan terikat di cara apapun oleh informasi yang terdapat 	
+	dalam Website. AdaDeal berhak setiap saat untuk mengubah atau menghentikan tanpa pemberitahuan, setiap aspek atau 
+	fitur dari website ini. Tidak ada informasi yang harus ditafsirkan sebagai saran dan informasi adalah ditawarkan untuk tujuan 
+	informasi saja dan tidak dimaksudkan untuk tujuan diperdagangkan. Anda dan perusahaan Anda mengandalkan informasi 
+	yang terdapat pada situs ini dengan resiko sendiri. Jika Anda menemukan kesalahan atau kelalaian di situs ini, silakan beritahu kami.</dd></dl>
+ <br>
+                <p><strong>2. Trade Marks</strong></p> <dl><dd>Merek dagang, nama, logo, dan merek layanan (secara kolektif disebut "merek dagang") yang ditampilkan pada Website ini 
+	semua terdaftar dan tidak terdaftar di AdaDeal. Tidak ada yang terkandung pada website ini harus ditafsirkan sebagai pem
+	berian lisensi atau hak untuk menggunakan merek dagang apapun tanpa izin tertulis dari AdaDeal.</dd></dl>
+<br>
+<p><strong>3. Link Eksternal</strong></p> <dl><dd>Pranala luar dapat disediakan untuk kenyamanan Anda, tetapi mereka berada di luar kendali AdaDeal dan representasi tidak 
+	dilakukan untuk konten mereka. Gunakan atau kepercayaan pada link eksternal dan diatasnya konten yang disediakan 
+	adalah risiko Anda sendiri. Ketika Anda mengunjungi link eksternal harus mengacu pada syarat dan ketentuan penggunaan 
+	untuk itu Website eksternal. Tidak ada link hypertext akan diciptakan dari setiap Website dikendalikan oleh Anda atau ke 
+	Website ini tanpa izin tertulis sebelumnya dari AdaDeal. Silakan hubungi kami jika Anda ingin link ke website ini atau ingin 
+	meminta link ke website anda.</dd></dl>
+<br>
+<p><strong>4. Forum Publik dan Penyebaran Materi</strong></p><dl><dd>AdaDeal tidak bertanggung jawab atas materi yang disampaikan ke daerah-daerah publik oleh Anda (termasuk papan bule-
+	tin, host halaman, chat room, atau area publik lainnya ditemukan di situs web. Setiap material (baik yang diajukan oleh Anda 
+	atau pengguna lain) adalah tidak didukung, ditinjau atau disetujui oleh AdaDeal. Cadangan hak penghapusan materi yang 
+	disampaikan oleh Anda di tempat umum, tanpa pemberitahuan kepada Anda, jika sudah sadar dan menentukan, dalam kebi-
+	jakan tunggal dan mutlak bahwa Anda atau ada kemungkinan bahwa Anda mungkin, termasuk tetapi tidak terbatas pada :
+    <br><br>
+	<strong>4.1</strong> Pencemaran nama baik, penyalahgunaan, melecehkan, mengganggu, mengancam atau melanggar hak pengguna yang 
+	lain atau pihak ketiga lainnya.<br><br>
+ 	<strong>4.2</strong> Menerbitkan, mendistribusikan atau menyebarkan fitnah, materi yang tidak senonoh, tidak layak dan tidak sah.<br><br>
+ 	<strong>4.3</strong> Posting atau upload file yang berisi virus, file rusak atau perangkat lunak atau program serupa lainnya yang dapat mer-
+	      usak operasi AdaDeal dan / atau sistem komputer pihak ketiga dan / atau jaringan;<br><br>
+	      <strong>4.4</strong> Melanggar hak cipta, merek dagang,  yang berlaku lainnya atau hukum internasional atau hak kekayaan intelektual 
+	      AdaDeal atau pihak ketiga lainnya;<br><br>
+	      <strong>4.5</strong> Memasukan konten pemasaran atau promosi yang bertujuan untuk menguntungkan bisnis.<br></dd></dl>
+<p><strong>5. Keanggotaan</strong></p> <dl><dd>AdaDeal tidak tersedia bagi pengguna di bawah usia 18, di luar target demografis, atau ada anggota yang sebelumnya dila	
+	rang oleh AdaDeal. Pengguna yang diizinkan hanya satu akun yang aktif. Melanggar kondisi ini dapat mengakibatkan pemu
+	tusan akun. <br>
+	AdaDeal pada kesempatan akan menawarkan anggotanya promosi. Sehubungan dengan promosi ini, setiap pengguna yang 
+	men	erima Hadiah (hadiah, kredit, kartu hadiah, kupon atau manfaat lain) dari AdaDeal melalui penggunaan beberapa akun, 
+	alamat email, memalsukan informasi atau melakukan penipuan, akan mengabaikan apapun seperti Hadiah yang diperoleh 	
+	melalui kegiatan dan dapat bertanggung jawab atas sipil dan / atau sanksi pidana oleh hukum.
+<br>
+	Dengan menggunakan AdaDeal Situs Web, Anda mengakui bahwa Anda berada pada usia hukum untuk membentuk perjan
+	jian yang mengikat dan bukan merupakan orang yang dilarang untuk menerima Layanan berdasarkan undang-undang  atau 
+	yurisdiksi lain yang berlaku. Anda setuju untuk memberikan informasi yang benar dan akurat tentang diri sendiri ketika 
+	diminta oleh AdaDeal Website. Jika Anda memberikan informasi yang tidak benar, tidak tepat, atau tidak lengkap, AdaDeal 
+	berhak untuk menangguhkan atau mengakhiri akun Anda dan menolak untuk menggunakan layanan masa depan. Anda 
+	bertanggung jawab untuk menjaga kerahasiaan akun Anda dan password, dan menerima semua bertanggung jawab untuk 
+	aktivitas yang terjadi dalam akun Anda.</dd></dl>
+<br>  
+<p><strong>6. Pembatalan Karena Kesalahan</strong></p> <dl><dd>AdaDeal berhak untuk membatalkan perintah kapan saja karena kesalahan ketik atau tak terduga yang menghasilkan produk 
+	(s) di situs yang tercantum tidak akurat (memiliki harga yang salah atau deskripsi dll). Dalam hal terjadi pembatalan dan pem
+	bayaran untuk pesanan sudah diterima, AdaDeal menerbitkan pengembalian dana penuh untuk produk dalam jumlah terse
+	but.</dd></dl> <br>	 
+<p><strong>7. Penggunaan Spesifik</strong></p> <dl><dd>Anda selanjutnya setuju untuk tidak menggunakan Situs Web untuk mengirim atau posting pesan atau material yang mel
+	anggar hukum, melecehkan, memfitnah, kasar, tidak senonoh, mengancam, berbahaya, vulgar, cabul, berorientasi seksual, 
+	rasial menyinggung, tidak senonoh, pornografi atau melanggar hukum yang berlaku dan Anda dengan ini membebaskan 
+	AdaDeal atas setiap kerugian, kewajiban, kerusakan atau biaya apapun alam yang AdaDeal atau pihak ketiga mungkin mend
+	erita yang disebabkan oleh atau timbul, baik secara langsung atau tidak langsung, penggunaan Anda atas Situs Web untuk 
+	mengirim atau posting apapun seperti pesan atau materi.</dd></dl> <br> 	 
+<p><strong>8. Jaminan</strong></p> <dl><dd>AdaDeal tidak memberikan jaminan, representasi, pernyataan atau jaminan (apakah mengungkapkan, tersirat dalam hukum 		atau sisa) tentang situs, informasi yang terkandung di situs, Anda atau informasi pribadi perusahaan Anda atau material dan 
+	informasi yang dikirimkan melalui sistem kami.</dd></dl> <br> 	 
+<p><strong>9. Permohonan Pertanggungjawaban</strong></p> <dl><dd>AdaDeal tidak bertanggung jawab untuk dan menolak semua tanggung jawab atas setiap kerugian, kewajiban, kerusakan 
+	(baik langsung, tidak langsung atau konsekuensial), cedera pribadi atau biaya apapun juga sifatnya yang mungkin diderita 
+	oleh Anda atau pihak ketiga (termasuk perusahaan Anda) . Seiring dengan hasil atau yang mungkin timbul, langsung atau 
+	tidak langsung, untuk mengakses dan menggunakan situs web ini, setiap informasi yang terdapat dalam Situs Web, Anda 
+	atau informasi pribadi perusahaan Anda atau material dan informasi yang dikirimkan melalui sistem kami. Secara khusus, 	
+	tidak AdaDeal atau pihak ketiga atau data atau penyedia konten akan bertanggung jawab dengan cara apapun kepada Anda 
+	atau 	kepada orang lain, perusahaan atau perusahaan apapun atas setiap kerugian, kewajiban, kerusakan (baik langsung atau 
+	konsekuensial), atau cedera pribadi biaya apapun juga sifatnya yang timbul dari keterlambatan, ketidakakuratan, kesalahan, 	
+	atau kelalaian dari informasi harga saham atau transmisi daripadanya, atau tindakan apapun yang dilakukan di atasnya ber
+	gantung atau disebabkan demikian atau dengan alasan non-kinerja atau interupsi, atau penghentian daripadanya. <br>
+	Program Kredit Referral dan Program Hadiah serta berbagai keuntungannya ditawarkan sepenuhnya atas kebijaksanaan 
+	AdaDeal. AdaDeal mempunyai hak untuk mengubah atau menghentikan, sementara atau selamanya jasa yang ditawarkan, 
+	secara keseluruhan atau sebagian dengan alasan apapun dan atas kebijaksanaannya sendiri, dengan atau tanpa pemberita
+	huan sebelumnya kepada anggota AdaDeal.
+<br>
+	AdaDeal bisa; diantara lain; menarik, membatasi, mengubah, menaikkan/ menurunkan kredit yang dibutuhkan untuk pena	
+	waran spesial apapun yang berhubungan dengan Kredit Referral dan Program Hadiah. Dengan menjadi anggota AdaDeal, 	
+	Anda setuju bahwa Program Kredit Referral dan Program Hadiah tidak akan bertanggungjawab kepada Anda atau pihak 
+	ketiga lainnya untuk perubahan atau penghentian program terkait.</dd></dl>
+<br>  
+<p><strong>10. Ganti Rugi</strong></p> <dl><dd>Pengguna bersedia membebaskan dan tidak terus AdaDeal (dan karyawan, direktur, pemasok, anak perusahaan, usaha 
+	patungan, dan mitra hukum) dari setiap klaim atau permintaan. Termasuk biaya pengacara yang wajar, dari dan terhadap
+	semua kerugian, biaya, kerugian dan biaya yang timbul dari pelanggaran syarat dan kondisi atau segala kegiatan yang terkait 
+	dengan akun pengguna keanggotaan karena tindakan kelalaian atau kesalahan.</dd></dl> <br>	 
+<p><strong>11. Penggunaan Website</strong></p> <dl><dd>AdaDeal tidak membuat jaminan apapun atau representasi informasi bahwa pada situs web ini sesuai untuk digunakan 	
+	dalam setiap yurisdiksi (Republic of ). Dengan mengakses situs web ini, Anda menjamin dan mewakili untuk AdaDeal bahwa
+	Anda secara hukum berhak untuk melakukannya dan untuk memanfaatkan informasi yang tersedia melalui Website.</dd></dl> <br>  
+<p><strong>12. Ketentuan Umum</strong><br><br></p>
+	<dl><dd>12.1 Keseluruhan Perjanjian. Istilah-istilah Website dan kondisi merupakan satu-satunya catatan perjanjian antara 
+		Anda dan AdaDeal dalam kaitannya dengan penggunaan Anda atas Situs. Baik Anda maupun AdaDeal akan teri
+		kat oleh setiap tersurat maupun tersirat representasi, jaminan, atau berjanji tidak dicatat di sini. Kecuali dinyata
+		kan secara khusus lain, istilah-istilah Website dan kondisi mengalihkan dan menggantikan semua komitmen 
+		sebelumnya, usaha atau pernyataan, baik tertulis atau lisan, antara Anda dan AdaDeal sehubungan dengan 
+		penggunaan Anda atas Situs.<br><br>
+	12.2 Perubahan. AdaDeal dapat setiap saat memodifikasi persyaratan dan kondisi yang relevan, kebijakan atau pem
+		beritahuan. Anda mengakui bahwa dengan mengunjungi Situs Web dari waktu ke waktu, Anda akan menjadi 
+		terikat pada versi saat ini persyaratan dan kondisi yang relevan (versi "saat ini") dan, kecuali dinyatakan dalam 
+		versi sekarang, semua versi sebelumnya akan diganti oleh versi saat ini. Anda akan bertanggung jawab untuk 
+		meninjau versi sekarang setiap kali Anda mengunjungi situs web.<br><br>
+	12.3 Konflik. Jika ada konflik atau pertentangan diantara peraturan-peraturan, syarat dan ketentuan yang berlaku di 
+		website atau syarat dan ketentuan yang berlaku, maka kami akan memberlakukan peraturan yang relevan 
+		dengan kasus Anda.<br><br>
+	12.4 Pelepasan. Tidak kegemaran atau perpanjangan waktu yang anda atau mungkin AdaDeal hibah untuk yang lain 
+		akan merupakan pengabaian atau, baik oleh hukum atau sebaliknya, membatasi hak yang ada atau yang akan 
+		datang pemberi hibah dalam ketentuan tersebut, simpan dalam peristiwa atau sejauh pemberi telah menanda
+		tangani dokumen tertulis tegas waiving atau membatasi hak tersebut.<br><br>
+	12.5 Aneksasi. AdaDeal berhak untuk membagi, menetapkan dan mendelegasikan semua atau sebagian hak dan ke
+		wajibannya dalam hal syarat dan kondisi yang relevan, kebijakan dan pemberitahuan kepada pihak ketiga.<br><br>
+	12.6 Pemisahan Peraturan. Ketentuan dari istilah atau kondisi setiap peraturan tidak berhubungan dengan penggru
+		pan atau penghubungan peraturan tersebut secara gramatikal. Jika ada ketentuan atau istilah dari salah satu 
+		peraturan yang tidak bisa digunakan di wilayah yurisdiksi manapun dikarenakan tidak ada ikatan legal, tidak 
+		valid, tidak legal, melawan hukum atau alasan apa pun, maka hanya peraturan tersebut yang tidak bisa diber
+		lakukan. Kondisi tersebut tidak menyebabkan seluruh ketentuan atau peraturan tidak berlaku atau tidak dapat 
+		digunakan.<br><br>
+	12.7 Berlaku hukum. Setiap kondisi dan persyaratan, kebijakan dan pemberitahuan akan diatur oleh dan ditafsirkan 
+		sesuai dengan hukum Republik  tanpa mempengaruhi prinsip-prinsip konflik hukum. Anda dengan ini setuju 
+		pada yurisdiksi eksklusif pengadilan Republik  sehubungan dengan setiap perselisihan yang timbul sehubungan 
+		dengan situs web, atau persyaratan dan kondisi yang relevan, kebijakan dan pemberitahuan atau segala sesuatu 
+		yang berhubungan dengan atau yang berhubungan dengannya.</dd></dl><br>	 
+<p><strong>13. Penghentian</strong></p> <dl><dd>Syarat dan ketentuan berlaku kepada Anda setelah Anda mengakses AdaDeal dan / atau menyelesaikan proses registrasi 
+	atau belanja. Syarat dan ketentuan ini, atau salah satu dari mereka, dapat dimodifikasi atau dihentikan oleh AdaDeal tanpa 
+	pemberitahuan setiap saat dengan alasan apapun. Ketentuan yang berkaitan dengan Hak Cipta dan Merek Dagang, Disclaim
+	er, Klaim, Batasan Kewajiban, Ganti Rugi, Hukum yang Berlaku, Arbitrase dan Umum, akan tetap penghentian.</dd></dl> <br>
+<p><strong>14. Pembatalan dan Pengembalian</strong></p> <dl><dd>Pesanan dapat dibatalkan jika voucher mereka belum diserahkan. Setelah voucher dikirim ke akun pengguna, mereka tidak 
+	lagi diijinkan untuk membatalkan. Setiap kembali setelah yang ditangani berdasarkan kasus per kasus. Dalam alasan, kita 
+	akan melakukan apa yang kami bisa untuk memastikan kepuasan pelanggan. Kecuali ada sesuatu yang salah dengan pembe
+	lian, kita umumnya tidak dapat menawarkan pengembalian dana.</dd></dl> <br>
+<p><strong>15. Kredit</strong></p> <dl><dd>15.1  Program Kredit Referral dan Program Hadiah serta berbagai keuntungannya ditawarkan sepenuhnya atas kebijaksanaan 
+		AdaDeal. AdaDeal mempunyai hak untuk mengubah atau menghentikan, sementara atau selamanya jasa yang ditawar
+		kan, secara keseluruhan atau sebagian dengan alasan apapun dan atas kebijaksanaannya sendiri, dengan atau tanpa 
+		pemberitahuan sebelumnya kepada anggota AdaDeal.<br><br>
+	15.2  AdaDeal berhak memblokir penggunaan Kredit AdaDeal milik Anda secara sepihak tanpa pemberitahuan apapun apa
+		bila Anda diduga melakukan penyalahgunaan dalam bentuk apapun untuk fitur "Undang Teman/Credit Refferal".<br><br>
+	15.3 Kredit yang diperoleh dari cara atau promosi lain selain Top Up Kredit AdaDeal atau Program Undang Teman Dapatkan 
+		Kredit AdaDeal, akan mempunyai masa berlaku yang berbeda sesuai dengan ketentuan yang telah ditetapkan.</dd></dl><br>
+<p><strong>16. Voucher</strong></p> <dl><dd>
+	16.1 Dengan berlangganan Newsletter kami, maka setiap pelanggan akan mendapatkan voucher sebesar Rp 50.000,00. Pengunaan voucher hanya berlaku dengan melakukan transkasi pembelian sebesar Rp 300.000,00.<br><br>
+    16.2 Setiap pengunjung yang "like" dan "follow" twitter kami akan mendapatkan voucher sebesar Rp 25.000,00. Pengunaan voucher hanya berlaku dengan melakukan transkasi pembelian sebesar Rp 200.000,00.<br><br>
+    16.3 Setiap pengunjung yang "share" produk kami pada akun facebook dan twitter mereka, maka kami akan memberikan voucher sebesar Rp 25.000,00 dan  Rp 100.000. Untuk penggunaan voucher Rp 25.000,00 dapat ditukarkan dengan melakukan transaksi pembelian sebesar Rp 200,000,00 sedangkan voucher seharga Rp 100,000,00 dapat ditukarkan dengan melakukan sebesar Rp 3000,000,00.<br><br>
+    16.4 Pengunaan voucher tidak dapat digunakan sekaligus dalam 1 transaksi artinya 1 voucher hanya bisa digunakan untuk 1 kali transaksi pembelian.
+</dd></dl> <br>
+        		</p>
+                	<div id="pernyataan" class="tittleBlockC01">
+                        	<h2>Pernyataan Privasi</h2>
+                    </div><div>
+                <p><strong>Kumpulan dan Distribusi Informasi</strong><br>
+AdaDeal  mengumpulkan informasi pribadi, seperti nama, alamat untuk bersurat, alamat email, dll, ketika diajukan secara sukarela oleh pengunjung kami. Informasi yang Anda berikan digunakan untuk memenuhi permintaan khusus Anda. Informasi ini hanya digunakan untuk memenuhi permintaan khusus Anda, kecuali Anda memberikan izin kepada kami untuk menggunakannya untuk kepentingan lain, seperti menambahkan Anda ke salah satu mailing list kami.
+AdaDeal  dapat berbagi informasi dengan instansi pemerintah atau perusahaan lainnya yang membantu kami dalam hal mencegah penipuan atau investigasi. Kami dapat melakukannya ketika: (1) diizinkan atau diharuskan oleh hukum, atau, (2) mencoba untuk melindungi atau mencegah penipuan atau hal yang berpotensi untuk berujung pada penipuan atau transaksi yang tidak sah, atau, (3) menyelidiki penipuan yang telah terjadi. Informasi ini tidak diberikan kepada perusahaan-perusahaan lain untuk kepentingan pemasaran.
+<br><br>
+<strong>Pelacakan Teknologi dan Keamanan Data</strong><br>
+Situs AdaDeal  dapat menggunakan cookie dan teknologi pelacakan tergantung pada fitur yang ditawarkan. Teknologi pelacakan dan cookie bermanfaat untuk mengumpulkan informasi seperti jenis browser dan system operasional, mendata jumlah pengunjung situs dan memahami cara pengunjung menggunakan situs. Cookie juga dapat membantu menyesuaikan situs untuk pengunjung. Informasi pribadi tidak dapat dikumpulkan melalui cookie dan teknologi pelacak lainnya. Namun, jika Anda sebelumnya memberikan informasi identitas pribadi, cookie dapat terhubung ke informasi tersebut.
+Informasi pribadi Anda disimpan secara aman. Hanya karyawan, agen dan kontraktor (yang setuju untuk menyimpan informasi Anda secara aman dan rahasia) akan memiliki akses ke informasi ini. Semua email dan newsletter dari situs ini memberikan pilihan kepada Anda untuk tidak disertakan ke dalam daftar mailing list berikutnya.
+<br><br>
+Jika Anda memiliki pertanyaan, keluhan atau komentar tentang kebijakan privasi kami, <a href="#">klik disini</a><br><br>
+AdaDeal berhak untuk melakukan perubahan terhadap kebijakan ini. Setiap perubahan kebijakan ini akan dicantumkan di situs.</p></div>
+                </div>
+                <!-- /#containArea -->
+            </div>
+            <!-- /#mainArea -->
+        </div>
+        <!-- /#wrapInner -->
+        <!-- footerArea-->
+        <div id="footerArea">
+        	<!-- #footerBlockA01 -->
+            <div id="footerBlockA01">
+                <!-- .footerWrapBlockA01 -->
+                <div class="footerWrapBlockA01">
+                    <!-- .leftFooter -->
+                    <div class="leftFooter">
+                    	<!-- .leftBlockA01 -->
+                        <div class="leftBlockA01">
+                            <h3>AdaDeal.com</h3>
+                            <ul>
+                                <li class="textMenu"><a href="../adadeal/index.html#tentang">Tentang Kami</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#kontak">Hubungi Kami</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#syarat">Syarat &amp; Ketentuan</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#pernyataan">Pernyataan Privasi</a></li>
+                            </ul>
+                       	</div>
+                        <div class="leftBlockA01">
+                            <h3>Bantuan</h3>
+                            <ul>
+                                <li class="textMenu"><a href="../bantuan/index.html#beli">Cara Beli</a></li>
+                                <li class="textMenu"><a href="../bantuan/index.html#kerja">Cara Kerja</a></li>
+                                <li class="textMenu"><a href="../bantuan/index.html#undang">Undang Teman</a></li>
+                                <li class="textMenu"><a href="../bantuan/index.html#kredit">Pembelian Kredit</a></li>
+                                <li class="textMenu"><a href="../bantuan/faq.html">FAQ</a></li>
+                            </ul>
+                       	</div>
+                        <div class="leftBlockA01">
+                            <div class="leftBlockB01">
+                                <h3>Temukan Kami</h3>
+                                <ul>
+                                    <li class="imgMenu"><a href="https://www.facebook.com/"><img src="../images/footer_img_001_ac.png.gif" width="45" height="36" alt="fbAdaDeal"/></a></li>
+                                    <li class="imgMenu"><a href="https://twitter.com/"><img src="../images/footer_img_002_ac.png.gif" width="45" height="36" alt="twitterAdaDeal"/></a></li>
+                                    <li><a href="https://plus.google.com/"><img src="../images/footer_img_003_ac.png.gif" width="45" height="36" alt="googleplusAdaDeal"/></a></li>
+                                </ul>
+                            </div>
+                            <div class="leftBlockB02">
+                                <h3>Metode Pembayaran</h3>
+                                <ul>
+                                    <li class="imgMenu"><a href="#"><img src="../images/footer_img_004_ac.png.gif" width="55" height="39" alt="visaAdaDeal"/></a></li>
+                                    <li class="imgMenu"><a href="#"><img src="../images/footer_img_005_ac.png.gif" width="55" height="39" alt="masterCardAdaDeal"/></a></li>
+                                    <li><a href="#"><img src="../images/footer_img_006_ac.png.gif" width="55" height="39" alt="PayPalAdaDeal"/></a></li>
+                                </ul>
+                            </div>
+                       	</div>
+                        <!-- /.leftBlockA01 -->
+                    </div>
+                    <!-- /.leftFooter -->
+                    <!-- .rightFooter -->
+                    <div class="rightFooter">
+                      <!-- .rightBlockA01 -->
+                      <div class="rightBlockA01">
+                      	<a href="adadeal/hubungi_kami.html"><h3>PARTNER<br>WITH US</h3></a>
+                        <a href="adadeal/hubungi_kami.html"><img src="../images/footer_img_007_ac.png.gif" width="173" height="95" alt="partnerAdaDeal"/></a>
+                      </div>
+                      <!-- /.rightBlockA01 -->
+                    </div>
+                    <!-- /.right -->
+                </div>
+                <!-- /.footerWrapBlockA01 -->
+            </div>
+            <!-- /#footerBlockA01 -->
+            <!-- #footerBlockA02 -->
+            <div id="footerBlockA02">
+            	<!-- .footerWrapBlockA02 -->
+                <div class="footerWrapBlockA02">
+                	<p>&copy;AdaDeal.com 2014 Copyright All Rights Reserved</p>
+                </div>
+                <!-- /.footerWrapBlockA02 -->
+            </div>
+            <!-- /#footerBlockA02 -->
+        </div>
+        <!-- /#footerArea -->
+    </div>
+    <!-- /#wrap -->
+    <script>
+    $('#info').readmore({
+    moreLink: '<a href="#">More examples and options</a>',
+    maxHeight: 390,
+    afterToggle: function(trigger, element, expanded) {
+    if(! expanded) { // The "Close" link was clicked
+    $('html, body').animate( { scrollTop: element.offset().top }, {duration: 100 } );
+    } 
+    }
+    });
+    $('article').readmore({maxHeight: 710});
+    </script>
+</body>
+</html>

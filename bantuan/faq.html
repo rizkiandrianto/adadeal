@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="keywords" content="kupon, coupon, deal, adadeal, jual, murah">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+	<title>AdaDeal.com | Frequently Asked Question</title>
+	<link href="../css/base.css" rel="stylesheet" type="text/css">
+	<link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/part.css">
+   	<link rel="shortcut icon" href="images/favicon.png">
+	<script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script type='text/javascript' src='../js/jquery-1.8.3.js'></script>
+	<script>
+jQuery("document").ready(function($){
+		 var nav = $('#headerArea');
+		 var logo = $('.logoBlockA01');
+		 var gnav = $('.gnavArea');
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 150) {
+					nav.removeClass("headerArea");
+					nav.addClass("headerAreaScroll");
+					
+					logo.removeClass("logoBlockA01");
+					logo.addClass("logoBlockA01Scroll");
+					
+					gnav.removeClass("gnavArea");
+					gnav.addClass("gnavAreaScroll");
+				} else {
+					nav.removeClass("headerAreaScroll");
+					nav.addClass("headerArea");
+					
+					logo.removeClass("logoBlockA01Scroll");
+					logo.addClass("logoBlockA01");
+					
+					gnav.removeClass("gnavAreaScroll");
+					gnav.addClass("gnavArea");
+				}
+			});
+		
+		var _SlideshowTransitions = [
+		//Fade
+		{ $Duration: 1200, $Opacity: 2 }
+		];
+		var options = {
+			$AutoPlay: true,                   
+			$AutoPlaySteps: 1,                
+			$AutoPlayInterval: 3000,           
+			$PauseOnHover: 1,                  
+
+			$ArrowKeyNavigation: true,   		
+			$SlideDuration: 500,               
+			$MinDragOffsetToSlide: 20,          
+			//$SlideWidth: 600,                 
+			//$SlideHeight: 300,                            
+			$SlideSpacing: 0, 					                
+			$DisplayPieces: 1,                                  
+			$ParkingPosition: 0,                                
+			$UISearchMode: 1,                                   
+			$PlayOrientation: 1,                                
+			$DragOrientation: 3,                                
+
+			$SlideshowOptions: {                               
+				$Class: $JssorSlideshowRunner$,                 
+				$Transitions: _SlideshowTransitions,           
+				$TransitionsOrder: 1,                          
+				$ShowLink: true                                   
+			},
+			$BulletNavigatorOptions: {                             
+				$Class: $JssorBulletNavigator$,                    
+				$ChanceToShow: 1,                           
+				$AutoCenter: 1,                                 
+				$Steps: 1,                                      
+				$Lanes: 1,                                      
+				$SpacingX: 10,                                 
+				$SpacingY: 10,                                 
+				$Orientation: 1                              
+			},
+
+			$ArrowNavigatorOptions: {
+				$Class: $JssorArrowNavigator$,            
+				$ChanceToShow: 1,                        
+				$Steps: 1                               
+			}
+		};
+		var jssor_slider1 = new $JssorSlider$("sliderBlockA01", options);
+
+		function ScaleSlider() {
+			var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+			if (parentWidth)
+				jssor_slider1.$ScaleWidth(Math.min(parentWidth, 940));
+			else
+				window.setTimeout(ScaleSlider, 30);
+		}
+		ScaleSlider();
+		if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+			$(window).bind('resize', ScaleSlider);
+		}
+});
+
+		$(window).load(function(){
+			$('.columnBlockA02').find('form').append('<div class="hideresults"></div><div class="popup"></div>');
+			
+			$('.columnBlockA02').find('form').submit(function(e){
+				e.preventDefault();
+				var q = $(this).find('.cari').attr('value');
+				//Maybe some AJAX-y results here would be cool!
+				$('.columnBlockA02').find('.popup').html( 'Mohon maaf, hasil pencarian ' + q + ' tidak ditemukan' ).show();
+				$('.hideresults').show();
+			});
+			
+			$('.columnBlockA02').find('.hideresults').click(function(e){
+				$(this).hide();
+				$('.columnBlockA02').find('.popup').hide();
+				$('.columnBlockA02').find('.cari').val('');
+			});
+			$('.columnBlockA02').find('.cari').blur(function(e){
+				$('.columnBlockA02').find('.cari').val('');
+				$('.columnBlockA02').find('.popup').hide();
+				$('.columnBlockA02').find('.hideresults').hide();
+			});
+			});
+</script>
+</head>
+<body>
+	<!-- #wrap -->
+	<div id="wrap">
+    	<!-- #headerArea -->
+		<div id="headerArea" class="headerArea">
+        	<!-- .headerBlockA01 -->
+			<div class="headerBlockA01">
+            	<!-- .headerWrapBlockA01 -->
+                <div class="headerWrapBlockA01">
+                	<!-- .columnBlockA01 -->
+                    <div class="columnBlockA01">
+                        <a href="../index.html"><img class="logoBlockA01" src="../images/logo.png" alt="logo ada deal"></a>
+                    </div>
+                    <!--/.columnBlockA01-->
+                    <div class="columnBlockA02">
+                        <form>
+                            <input class="cari" type="text" placeholder="Cari deal...">
+                            <input type="submit" value="" >
+                        </form>
+                    </div>
+                    <!--/.columnBlockA02-->
+                    <div class="columnBlockA03">
+                        <div class="chartBlockA01"><p>0</p></div>
+                        <div class="chartBlockA02"><a href="../cart/index.html"><img src="../images/add17.png" alt="chart icon" width="30" height="30"></a></div>
+                        <div class="chartBlockA03"><a href="../cart/index.html">Keranjang</a></div>
+                    </div>
+                    <!--/.columnBlockA03-->
+                    <div class="columnBlockA04">
+                        <div class="accountBlockA02">
+                        	<input type="checkbox" id="toggle" class="togel">
+							<label for="toggle"><img src="../images/user.png" width="25" height="30" alt="user"/>Akun</label>
+                            <div class="loginBlockA01">
+                          		<ul class="listLoginBlockA01">
+                            		<input name="username" id="username" placeholder="nama akun" type="text">
+                            		<input name="password" id="password" value="" placeholder="kata sandi" type="password" onkeypress="if (event.keyCode==13){document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;}" >
+                                    <div class="clearfix"></div>
+                                    <div class="columnBlockA11">
+                                        <div class="columnBlockA13">
+                                        	<a href="#">lupa password?</a><br>
+                                        </div>
+                                        <!--./columnBlockA13-->
+                                        <div class="columnBlockA14">
+                                        	<input type="checkbox" id="cekboks">
+                                        	<label for="cekboks">Ingat saya</label>
+                                        </div>
+                                        <!--./columnBlockA14-->
+                                    </div>
+                                    <!--./columnBlockA11-->
+                                    <div class="columnBlockA12">
+                                    	<input type="submit" value="Masuk" onClick="document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('toggle').checked=false;">
+                                    </div>
+                                    <!--./columnBlockA12-->
+                                    <div class="clearfix"></div>
+                                    <hr class="hrBlockA01">
+                                    <div class="columnBlockA15">
+                                    	<p>atau daftar dengan : </p>
+                                    </div>
+                                    <!--./columnBlockA15-->
+                                    <div class="columnBlockA16">
+                                    	<ul class="social">
+                                            <a href="https://www.facebook.com/" id="a-login-facebook">
+                                                <li class="sprite-social" id="facebook">FACEBOOK</li>
+                                            </a>
+                                            <a href="https://twitter.com/" id="a-login-twitter">
+                                                <li class="sprite-social" id="twitter">TWITTER</li>
+                                            </a>
+                                            <a href="https://plus.google.com/" id="a-login-google">
+                                                <li class="sprite-social" id="google">GOOGLEPLUS</li>
+                                            </a>
+										</ul>
+                                        <!--/ul.social-->
+                                    </div>
+                                    <!--./columnBlockA16-->
+                                    <hr class="hrBlockA01">
+                                    <div class="columnBlockA17">
+                                    	<p>New to AdaDeal?</p>
+                                    </div>
+                                    <!--./columnBlockA17-->
+                                    <button onClick="window.location.href='register/index.html'">DAFTAR SEKARANG</button>
+                          		</ul>
+                                <!--./ul.listloginBlockA01-->
+                            </div>
+                            <!--./loginBlockA01-->
+                    	</div>
+                      	<!--/.accountBlockA02-->
+                    </div>
+                    <!--/.columnBlockA04-->
+                    <div class="clearfix"></div>
+                </div>
+                <!--/.headerWrapBlockA01-->
+			</div>
+            <!--/.headerBlockA01-->
+ 			<div id="gnavArea" class="gnavArea">
+                <div class="gnavAreaWrap">
+                    <ul>
+                        <li class="listBlockA01"><a href="../index.html">Semua Deal</a></li>
+                        <li class="listBlockA01"><a href="../makanan/index.html">Makanan</a>
+                            <ul>
+                                <li><a href="../makanan/menu_utama.html">Menu Utama</a></li>
+                                <li><a href="../makanan/penutup.html">Penutup</a></li>
+                                <li><a href="../makanan/minuman.html">Minuman</a></li>
+                                <li><a href="../makanan/cepat_saji.html">Cepat Saji</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../kecantikan/index.html">Kecantikan</a>
+                            <ul>
+                                <li><a href="../kecantikan/kosmetik.html">Kosmetik</a></li>
+                                <li><a href="../kecantikan/gigi.html">Gigi</a></li>
+                                <li><a href="../kecantikan/kulit.html">Kulit</a></li>
+                                <li><a href="../kecantikan/lainnya.html">Lainnya</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../pelayanan/index.html">Pelayanan</a>
+                            <ul>
+                                <li><a href="../pelayanan/otomotif.html">Otomotif</a></li>
+                                <li><a href="../pelayanan/pernikahan.html">Pernikahan</a></li>
+                                <li><a href="../pelayanan/rumah_tangga.html">Rumah Tangga</a></li>
+                                <li><a href="../pelayanan/fotografi.html">Fotografi</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="../produk/index.html">Produk</a>
+                            <ul>
+                                <li><a href="../produk/elektronik.html">Elektronik</a></li>
+                                <li><a href="../produk/gadget.html">Gadget</a></li>
+                                <li><a href="../produk/pakaian.html">Pakaian</a></li>
+                            </ul>
+                        </li>
+                        <li class="listBlockA01"><a href="perjalanan/index.html">Perjalanan</a>
+                            <ul>
+                                <li><a href="../produk/nasional.html">Nasional</a></li>
+                                <li><a href="../produk/internasional.html">Internasional</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+            	</div>
+                <!--gnavAreaWrap-->
+			</div>
+            <!--/#gnavArea-->
+        </div>
+        <!-- /#headerArea -->
+        <!-- #wrapInner -->
+        <div id="wrapInner">
+            <!-- #mainArea -->
+            <div id="mainArea">
+              <div id="breadcrumb">
+				<ul>
+					<li><a href="../index.html"><img src="../images/content_ico_001.png" width="21" height="16"></a></li>
+                    <li>&#62;</li>
+                    <li>F.A.Q</li>
+                </ul>
+              </div>				            	
+              <!-- #breadcrumb -->             
+              	<!-- #containArea -->
+                <div id="containArea">
+                    <h5 class="header">1. Apakah AdaDeal.com itu?</h5>
+                    <p class="faqBlockA01">AdaDeal.com adalah situs Daily Deals yang menawarkan diskon fantastis untuk restoran, kecantikan, hiburan, produk-produk terbaru, gadgets dan jalan-jalan di dalam dan luar negeri setiap hari. Kami menawarkan diskon terbaik untuk semua anggota. Tujuan kami adalah untuk mendapatkan deal eksklusif yang tidak didapatkan di tempat lain.</p>
+                    <h5 class="header">2. Dimanakah AdaDeal itu?</h5>
+                    <p class="faqBlockA01">AdaDeal mempunyai 1 kantor di Indonesia yaitu di Jakarta.</p>
+                    <h5 class="header">3. Apakah ada biaya untuk menjadi anggota?</h5>
+                    <p class="faqBlockA01">Tidak – Anda dapat mendaftar GRATIS dan hanya membayar bila membeli voucher.</p>
+                    <h5 class="header">4. AdaDeal menawarkan deal dari kota mana saja setiap harinya?</h5>
+                    <p class="faqBlockA01">AdaDeal saat ini tidak hanya menawarkan deal dari Jakarta tetapi juga deal dari kota  Denpasar. Selain itu, Anda juga bisa jalan-jalan di dalam dan luar negeri dengan deal Travel dari kami.</p>
+                    <h5 class="header">5. Apakah AdaDeal itu aman?</h5>
+                    <p class="faqBlockA01">Ya - data anggota AdaDeal sangat aman. Semua data pribadi Anda, seperti nomor telepon, nomor rekening bank pribadi dan alamat, kami simpan di data base AdaDeal yang tidak akan kami buka untuk publik atau berikan ke pihak merchant. AdaDeal hanya memberikan daftar nama dan nomor voucher Anda ke pihak merchant sebagai bukti Anda telah memperoleh voucher yang asli dari AdaDeal.</p>
+                    <h5 class="header">6. Apa yang akan Anda lakukan dengan kartu kredit dan informasi billing saya?</h5>
+                    <p class="faqBlockA01">Kami tidak menyimpan informasi kartu kredit Anda. Kami menggunakan partner banking kami untuk menangani penyimpanan informasi secara aman.</p>
+                    <h5 class="header">7. Apa yang AdaDeal lakukan dengan email kami?</h5>
+                    <p class="faqBlockA01">Kami menjaga informasi pribadi Anda dan menggunakannya hanya untuk memberitahu Anda tentang penawaran diskon kami, notifikasi pembelian dan atau bertanya tentang pendapat Anda demi meningkatkan layanan kami. Silakan baca kebijakan privasi kami untuk informasi lebih lanjut.</p>
+                    <h5 class="header">8. Bagaimana saya membeli Deal di AdaDeal ?</h5>
+                    <p class="faqBlockA01">Pastikan Anda sudah login terlebih dahulu ke situs AdaDeal dengan memasukan alamat email dan password yang sebelumnya Anda cantumkan ke situs AdaDeal pada saat pendaftaran. Anda dapat mengklik tombol "BELI" kapanpun dan dimanapun, sebelum deal berakhir. Silakan mengikuti proses pembelian yang tersedia setelah Anda mengklik tombol "BELI".</p>
+                    <h5 class="header">9. Apa yang harus saya lakukan lagi setelah klik "BELI"?</h5>
+                    <p class="faqBlockA01">Jika Anda membayar voucher melalui transfer ATM ke nomor rekening bank AdaDeal (BCA, BNI, Mandiri, pastikan Anda melakukan konfirmasi pembayaran di akun Anda setelah mentrasfer pembayaran voucher melalui bank AdaDeal yang sudah dipilih. Klik "Akunku" dan pilih menu "Kuponku" untuk mengkonfirmasi pembayaran di link "Konfirmasi Pembayaran" yang tersedia di kolom voucher Anda. Mohon cantumkan nomor order Anda di kotak pesan yang tersedia di formulir konfirmasi pembayaran.</p>
+                    <h5 class="header">10. Apa itu Instant Payment?</h5>
+                    <p class="faqBlockA01">Instant Payment adalah cara pembayaran/ transaksi melalui salah satu channel instant payment partner kami, yaitu: KlikBCA, BCA KlikPay, Mandiri Visa Credit Card, T-Cash, Keuntungan tambahan lain yang bisa Anda dapatkan dari cara pembayaran ini adalah Voucher akan segera Anda peroleh setelah transaksi pembayaran dilakukan. Anda cukup memilih option instant payment partner yang tersedia dan mengikuti instruksi tata cara melakukan transaksi yang akan tersedia langsung setelah Anda menentukan pilihan Anda.</p>
+                 </div>
+                 <!-- /#containArea -->
+            </div>
+            <!-- /#mainArea -->
+        </div>
+        <!-- /#wrapInner -->
+        <!-- footerArea-->
+        <div id="footerArea">
+        	<!-- #footerBlockA01 -->
+            <div id="footerBlockA01">
+                <!-- .footerWrapBlockA01 -->
+                <div class="footerWrapBlockA01">
+                    <!-- .leftFooter -->
+                    <div class="leftFooter">
+                    	<!-- .leftBlockA01 -->
+                        <div class="leftBlockA01">
+                            <h3>AdaDeal.com</h3>
+                            <ul>
+                                <li class="textMenu"><a href="../adadeal/index.html#tentang">Tentang Kami</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#kontak">Hubungi Kami</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#syarat">Syarat &amp; Ketentuan</a></li>
+                                <li class="textMenu"><a href="../adadeal/index.html#pernyataan">Pernyataan Privasi</a></li>
+                            </ul>
+                       	</div>
+                        <div class="leftBlockA01">
+                            <h3>Bantuan</h3>
+                            <ul>
+                                <li class="textMenu"><a href="index.html#beli">Cara Beli</a></li>
+                                <li class="textMenu"><a href="index.html#kerja">Cara Kerja</a></li>
+                                <li class="textMenu"><a href="index.html#undang">Undang Teman</a></li>
+                                <li class="textMenu"><a href="index.html#kredit">Pembelian Kredit</a></li>
+                                <li class="textMenu"><a href="faq.html">FAQ</a></li>
+                            </ul>
+                       	</div>
+                        <div class="leftBlockA01">
+                            <div class="leftBlockB01">
+                                <h3>Temukan Kami</h3>
+                                <ul>
+                                    <li class="imgMenu"><a href="https://www.facebook.com/"><img src="../images/footer_img_001_ac.png.gif" width="45" height="36" alt="fbAdaDeal"/></a></li>
+                                    <li class="imgMenu"><a href="https://twitter.com/"><img src="../images/footer_img_002_ac.png.gif" width="45" height="36" alt="twitterAdaDeal"/></a></li>
+                                    <li><a href="https://plus.google.com/"><img src="../images/footer_img_003_ac.png.gif" width="45" height="36" alt="googleplusAdaDeal"/></a></li>
+                                </ul>
+                            </div>
+                            <div class="leftBlockB02">
+                                <h3>Metode Pembayaran</h3>
+                                <ul>
+                                    <li class="imgMenu"><a href="#"><img src="../images/footer_img_004_ac.png.gif" width="55" height="39" alt="visaAdaDeal"/></a></li>
+                                    <li class="imgMenu"><a href="#"><img src="../images/footer_img_005_ac.png.gif" width="55" height="39" alt="masterCardAdaDeal"/></a></li>
+                                    <li><a href="#"><img src="../images/footer_img_006_ac.png.gif" width="55" height="39" alt="PayPalAdaDeal"/></a></li>
+                                </ul>
+                            </div>
+                       	</div>
+                        <!-- /.leftBlockA01 -->
+                    </div>
+                    <!-- /.leftFooter -->
+                    <!-- .rightFooter -->
+                    <div class="rightFooter">
+                      <!-- .rightBlockA01 -->
+                      <div class="rightBlockA01">
+                      	<a href="../adadeal/index.html#kontak"><h3>PARTNER<br>WITH US</h3></a>
+                        <a href="../adadeal/index.html#kontak"><img src="../images/footer_img_007_ac.png.gif" width="173" height="95" alt="partnerAdaDeal"/></a>
+                      </div>
+                      <!-- /.rightBlockA01 -->
+                    </div>
+                    <!-- /.right -->
+                </div>
+                <!-- /.footerWrapBlockA01 -->
+            </div>
+            <!-- /#footerBlockA01 -->
+            <!-- #footerBlockA02 -->
+            <div id="footerBlockA02">
+            	<!-- .footerWrapBlockA02 -->
+                <div class="footerWrapBlockA02">
+                	<p>&copy;AdaDeal.com 2014 Copyright All Rights Reserved</p>
+                </div>
+                <!-- /.footerWrapBlockA02 -->
+            </div>
+            <!-- /#footerBlockA02 -->
+        </div>
+        <!-- /#footerArea -->
+    </div>
+    <!-- /#wrap -->
+    <script>
+    $('#info').readmore({
+    moreLink: '<a href="#">More examples and options</a>',
+    maxHeight: 390,
+    afterToggle: function(trigger, element, expanded) {
+    if(! expanded) { // The "Close" link was clicked
+    $('html, body').animate( { scrollTop: element.offset().top }, {duration: 100 } );
+    } 
+    }
+    });
+    $('article').readmore({maxHeight: 710});
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset Area */
+.clearfix {
+	clear:both;
+}
+
+body, p, h1, h2, h3, ul, li, p, a, input{
+	margin:0;
+	padding:0;
+	}
+
+a{
+	text-decoration:none;
+	color:#000000;
+	cursor: pointer;
+	}
+	
+li{
+	list-style:none;
+	}
+
+@font-face {
+font-family:Myriad;
+src:url(MyriadPro-Regular.otf);
+}
+
+*,body{
+	/*font-family: Myriad;*/
+	}
+
+/* Reset Area */
